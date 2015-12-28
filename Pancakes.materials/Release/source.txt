@@ -13,9 +13,13 @@ Use mixed liquids.
 The kitchen is a room. "You're standing in the open kitchen of your studio apartment. A dark granite counter-top separates you from the rest of your living space; beyond that is a wall-to-wall window through which the sun shines."
 
 when play begins:
-  say "Ah, it's a beautiful Saturday morning. The perfect time to make a delicious, relaxing breakfast!"
-  
+	say "Ah, it's a beautiful Saturday morning. The perfect time to make a delicious, relaxing breakfast!"
+
 Inside the kitchen is a closed, openable, fixed in place container called a cupboard. The description of the cupboard is "The cupboard has a dark oaky texture to it; you can't tell whether it's fake or made of real wood. [if the cupboard is closed]A brushed metal handle can be used to open it.[end if]". The initial appearance of the cupboard is "Just above your head, a cupboard is affixed to the wall.".
+
+[For the purposes of our simulation, we're going to treat the pancake mix as a liquid. This also means we don't want the game telling players that liquid containers hold *only* liquids.]
+
+The can't put solids into a fluid container rule response (A) is "[The second noun] hold[s] only liquids and other mixable ingredients."
 
 Inside the cupboard is a Bisquick box. The box is a fluid container. The fluid capacity of the box is 32.0 fl oz. The fluid content of the box is 8.0 fl oz. The liquid of the box is pancake mix. The description of the box is "It is bright yellow with blue text on it. Instructions are printed on the back.".
 
@@ -33,26 +37,11 @@ Inside the kitchen is a closed, openable, fixed in place container called a refr
 
 Inside the refrigerator is a carton. The carton is a fluid container. The fluid capacity of the carton is 64.0 fl oz. The fluid content of the carton is 4.0 fl oz. The liquid of the carton is milk. The description of the carton is "A half-gallon cardboard carton of milk from the grocery store."
 
-Inside the refrigerator is an egg. The egg is a fluid container. The fluid capacity of the egg is 2.0 fl oz. The fluid content of the egg is 2.0 fl oz. The liquid of the egg is raw egg. The egg is closed and opaque.
+Inside the refrigerator is an egg. The egg is a fluid container. The fluid capacity of the egg is 2.0 fl oz. The fluid content of the egg is 2.0 fl oz. The liquid of the egg is raw egg.
 
-Inside the kitchen is a cast-iron skillet. The skillet is an open, transparent container. The description of the skillet is "It's a pre-seasoned 10-inch skillet."
+[If we make the egg closed and opaque, the Measured Liquid extension won't describe it as an "egg of raw egg". But we'll need to do a bit of trickery to secretly "open" it just before the game's pouring rules are consulted, so that it can actually be poured.]
 
-The egg shell is a thing. The description of the egg shell is "It is all that remains of your formerly unbroken egg."
-
-The pancake-shaped blob is a thing. The description of the blob is "It is a pancake-shaped blob of pancake batter, ready for cooking."
-
-Definition: a thing is egglike if it is the egg.
-Definition: a thing is skillety if it is the skillet.
-
-Understand "crack [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
-Understand "break [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
-Understand "put [a fluid container] in/into/on/onto [a fluid container]" as pouring it into.
-Understand "put [a fluid container] in/into/on/onto [something skillety]" as pouring it into.
-
-The can't put solids into a fluid container rule is not listed in any rulebook.
-
-Check inserting something into a fluid container (this is the can't put non-mixable ingredients in a fluid container rule):
-	say "[The second noun] hold[s] only liquids and other mixable ingredients." instead.
+The egg is closed and opaque.
 
 Before pouring egg into something:
 	now the egg is open.
@@ -62,7 +51,32 @@ Last check pouring egg into something:
 	remove the noun from play;
 	now the egg shell is in the kitchen.
 
-Understand "batter" as pancake batter.
+Definition: a thing is egglike if it is the egg.
+
+Understand "crack [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
+Understand "break [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
+
+The egg shell is a thing. The description of the egg shell is "It is all that remains of your formerly unbroken egg."
+
+Inside the kitchen is a stovetop. The stovetop is a fixed in place device. Understand "stove" and "oven" as the stovetop. The description of the stovetop is "It's a stovetop with a gas burner and a switch to control it. [If switched on]A ring of flames rises just below the burner grate, atop which [is-are the list of things on the burner grate][otherwise]Sitting atop the burner grate [is-are the list of things on the burner grate][end if]." The initial appearance of the stovetop is "Under the cupboard is a stovetop."
+
+[Because the stovetop can't be both a device and a supporter, we need to make the supporter a part of the stovetop: we'll call it the burner grate.]
+
+The burner grate is part of the stovetop.
+
+Instead of putting the skillet on the stovetop:
+	try putting the skillet on the burner grate.
+
+A cast-iron skillet is on the burner grate. The skillet is an open, transparent container. The description of the skillet is "It's a pre-seasoned 10-inch skillet."
+
+The pancake-shaped blob is a thing. The description of the blob is "It is a pancake-shaped blob of pancake batter, ready for cooking."
+
+Instead of taking the pancake-shaped blob, say "That would be very goopy."
+
+Definition: a thing is skillety if it is the skillet.
+
+Understand "put [a fluid container] in/into/on/onto [a fluid container]" as pouring it into.
+Understand "put [a fluid container] in/into/on/onto [something skillety]" as pouring it into.
 
 Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
 	if the liquid poured is pancake batter:
@@ -74,8 +88,6 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 	otherwise:
 		Say "You should only pour ingredients ready for cooking onto the skillet.";
 		stop the action.
-
-Instead of taking the pancake-shaped blob, say "That would be very goopy."
 
 the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
 
@@ -97,5 +109,12 @@ mix-list	result
 { milky raw egg, pancake mix }	pancake batter
 { eggy pancake mix, milk }	pancake batter
 { milky pancake mix, raw egg}	pancake batter
+
+Understand "batter" as pancake batter.
+
+Every turn:
+	if the pancake-shaped blob is in the skillet and the stovetop is switched on and the skillet is on the burner grate:
+		say "Hooray, you've started cooking the pancake! Unfortunately, the author hasn't implemented the rest of the cooking process yet, so you've won the game... for now.";
+		end the story finally.
 
 Test me with "open cupboard / open fridge / put milk into cup / pour pancake mix into cup / crack egg into cup / pour batter into skillet".
