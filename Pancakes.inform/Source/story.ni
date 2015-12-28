@@ -17,6 +17,10 @@ when play begins:
   
 Inside the kitchen is a closed, openable, fixed in place container called a cupboard. The description of the cupboard is "The cupboard has a dark oaky texture to it; you can't tell whether it's fake or made of real wood. [if the cupboard is closed]A brushed metal handle can be used to open it.[end if]". The initial appearance of the cupboard is "Just above your head, a cupboard is affixed to the wall.".
 
+[For the purposes of our simulation, we're going to treat the pancake mix as a liquid. This also means we don't want the game telling players that liquid containers hold *only* liquids.]
+
+The can't put solids into a fluid container rule response (A) is "[The second noun] hold[s] only liquids and other mixable ingredients."
+
 Inside the cupboard is a Bisquick box. The box is a fluid container. The fluid capacity of the box is 32.0 fl oz. The fluid content of the box is 8.0 fl oz. The liquid of the box is pancake mix. The description of the box is "It is bright yellow with blue text on it. Instructions are printed on the back.".
 
 A thing can be readable.
@@ -73,8 +77,6 @@ Definition: a thing is skillety if it is the skillet.
 
 Understand "put [a fluid container] in/into/on/onto [a fluid container]" as pouring it into.
 Understand "put [a fluid container] in/into/on/onto [something skillety]" as pouring it into.
-
-The can't put solids into a fluid container rule response (A) is "[The second noun] hold[s] only liquids and other mixable ingredients."
 
 Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
 	if the liquid poured is pancake batter:
