@@ -112,4 +112,9 @@ mix-list	result
 
 Understand "batter" as pancake batter.
 
+Every turn:
+	if the pancake-shaped blob is in the skillet and the stovetop is switched on and the skillet is on the burner grate:
+		say "Hooray, you've started cooking the pancake! Unfortunately, the author hasn't implemented the rest of the cooking process yet, so you've won the game... for now.";
+		end the story finally.
+
 Test me with "open cupboard / open fridge / put milk into cup / pour pancake mix into cup / crack egg into cup / pour batter into skillet".
