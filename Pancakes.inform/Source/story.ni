@@ -58,10 +58,7 @@ Understand "break [something egglike] in/into/on/onto [a fluid container]" as po
 Understand "put [a fluid container] in/into/on/onto [a fluid container]" as pouring it into.
 Understand "put [a fluid container] in/into/on/onto [something skillety]" as pouring it into.
 
-The can't put solids into a fluid container rule is not listed in any rulebook.
-
-Check inserting something into a fluid container (this is the can't put non-mixable ingredients in a fluid container rule):
-	say "[The second noun] hold[s] only liquids and other mixable ingredients." instead.
+The can't put solids into a fluid container rule response (A) is "[The second noun] hold[s] only liquids and other mixable ingredients."
 
 Before pouring egg into something:
 	now the egg is open.
