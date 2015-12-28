@@ -57,10 +57,12 @@ The egg shell is a thing. The description of the egg shell is "It is all that re
 The pancake-shaped blob is a thing. The description of the blob is "It is a pancake-shaped blob of pancake batter, ready for cooking."
 
 Definition: a thing is egglike if it is the egg.
+Definition: a thing is skillety if it is the skillet.
 
 Understand "crack [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
 Understand "break [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
 Understand "put [a fluid container] in/into/on/onto [a fluid container]" as pouring it into.
+Understand "put [a fluid container] in/into/on/onto [something skillety]" as pouring it into.
 
 The can't put solids into a fluid container rule is not listed in any rulebook.
 
