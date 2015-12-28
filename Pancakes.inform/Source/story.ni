@@ -52,8 +52,14 @@ Inside the refrigerator is an egg. The egg is a fluid container. The fluid capac
 
 The egg shell is a thing. The description of the egg shell is "It is all that remains of your formerly unbroken egg."
 
-Understand the command "crack" as something new. Understand the command "crack" as "pour".
-Understand the command "break" as something new. Understand the command "break" as "pour".
+Definition: a thing is egglike if it is the egg.
+
+Understand "crack [something egglike] in/into [a fluid container]" as pouring it into.
+Understand "break [something egglike] in/into [a fluid container]" as pouring it into.
+Understand "put [something egglike] in/into [a fluid container]" as pouring it into.
+
+[Understand the command "crack" as something new. Understand the command "crack" as "pour".]
+[Understand the command "break" as something new. Understand the command "break" as "pour".]
 
 Before pouring egg into something:
 	now the egg is open;
