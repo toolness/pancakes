@@ -4,7 +4,7 @@ Release along with an interpreter.
 
 [Cover art taken from https://www.flickr.com/photos/kurmanphotos/14136765763]
 
-Release along with cover art ("A stack of pancakes.").
+Release along with cover art ("A stack of pancakes.") and source text.
 
 Include Measured Liquid by Emily Short.
 
