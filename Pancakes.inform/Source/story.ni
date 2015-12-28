@@ -58,15 +58,12 @@ Understand "crack [something egglike] in/into [a fluid container]" as pouring it
 Understand "break [something egglike] in/into [a fluid container]" as pouring it into.
 Understand "put [something egglike] in/into [a fluid container]" as pouring it into.
 
-[Understand the command "crack" as something new. Understand the command "crack" as "pour".]
-[Understand the command "break" as something new. Understand the command "break" as "pour".]
-
 Before pouring egg into something:
-	now the egg is open;
-	Say "You crack the egg open by tapping it on the counter-top."
+	now the egg is open.
 
 Last check pouring egg into something:
+	Say "You crack the egg open by tapping it on the counter-top.";
 	remove the noun from play;
 	now the egg shell is in the kitchen.
 
-Test me with "open cupboard / open fridge / take all / pour milk into cup / pour pancake mix into cup / crack egg into cup".
+Test me with "open cupboard / open fridge / pour milk into cup / pour pancake mix into cup / crack egg into cup".
