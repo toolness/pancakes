@@ -60,7 +60,12 @@ Definition: a thing is egglike if it is the egg.
 
 Understand "crack [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
 Understand "break [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
-Understand "put [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
+Understand "put [a fluid container] in/into/on/onto [a fluid container]" as pouring it into.
+
+The can't put solids into a fluid container rule is not listed in any rulebook.
+
+Check inserting something into a fluid container (this is the can't put non-mixable ingredients in a fluid container rule):
+	say "[The second noun] hold[s] only liquids and other mixable ingredients." instead.
 
 Before pouring egg into something:
 	now the egg is open.
@@ -87,4 +92,4 @@ Instead of taking the pancake-shaped blob, say "That would be very goopy."
 
 the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
 
-Test me with "open cupboard / open fridge / pour milk into cup / pour pancake mix into cup / crack egg into cup / pour batter into skillet".
+Test me with "open cupboard / open fridge / put milk into cup / pour pancake mix into cup / crack egg into cup / pour batter into skillet".
