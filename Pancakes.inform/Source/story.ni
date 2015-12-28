@@ -50,13 +50,17 @@ Inside the refrigerator is a carton. The carton is a fluid container. The fluid 
 
 Inside the refrigerator is an egg. The egg is a fluid container. The fluid capacity of the egg is 2.0 fl oz. The fluid content of the egg is 2.0 fl oz. The liquid of the egg is raw egg. The egg is closed and opaque.
 
+Inside the kitchen is a cast-iron skillet. The skillet is an open, transparent container. The description of the skillet is "It's a pre-seasoned 10-inch skillet."
+
 The egg shell is a thing. The description of the egg shell is "It is all that remains of your formerly unbroken egg."
+
+The pancake-shaped blob is a thing. The description of the blob is "It is a pancake-shaped blob of pancake batter, ready for cooking."
 
 Definition: a thing is egglike if it is the egg.
 
-Understand "crack [something egglike] in/into [a fluid container]" as pouring it into.
-Understand "break [something egglike] in/into [a fluid container]" as pouring it into.
-Understand "put [something egglike] in/into [a fluid container]" as pouring it into.
+Understand "crack [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
+Understand "break [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
+Understand "put [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
 
 Before pouring egg into something:
 	now the egg is open.
@@ -66,4 +70,21 @@ Last check pouring egg into something:
 	remove the noun from play;
 	now the egg shell is in the kitchen.
 
-Test me with "open cupboard / open fridge / pour milk into cup / pour pancake mix into cup / crack egg into cup".
+Understand "batter" as pancake batter.
+
+Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
+	if the liquid poured is pancake batter:
+		if the fluid content of the noun is greater than 0.0 fl oz:
+			Now the fluid content of the noun is 0.0 fl oz;
+			Now the pancake-shaped blob is in the skillet;
+			Say "You pour the pancake batter into a pancake-shaped blob on the skillet.";
+			stop the action;
+	otherwise:
+		Say "You should only pour ingredients ready for cooking onto the skillet.";
+		stop the action.
+
+Instead of taking the pancake-shaped blob, say "That would be very goopy."
+
+the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
+
+Test me with "open cupboard / open fridge / pour milk into cup / pour pancake mix into cup / crack egg into cup / pour batter into skillet".
