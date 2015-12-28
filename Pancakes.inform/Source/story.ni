@@ -55,8 +55,6 @@ The egg shell is a thing. The description of the egg shell is "It is all that re
 Understand the command "crack" as something new. Understand the command "crack" as "pour".
 Understand the command "break" as something new. Understand the command "break" as "pour".
 
-Understand "crack [something] into [container]" as pouring it into.
-
 Before pouring egg into something:
 	now the egg is open;
 	Say "You crack the egg open by tapping it on the counter-top."
