@@ -33,32 +33,11 @@ Inside the kitchen is a closed, openable, fixed in place container called a refr
 
 Inside the refrigerator is a carton. The carton is a fluid container. The fluid capacity of the carton is 64.0 fl oz. The fluid content of the carton is 4.0 fl oz. The liquid of the carton is milk. The description of the carton is "A half-gallon cardboard carton of milk from the grocery store."
 
-Inside the refrigerator is an egg. The egg is a fluid container. The fluid capacity of the egg is 2.0 fl oz. The fluid content of the egg is 2.0 fl oz. The liquid of the egg is raw egg. The egg is closed and opaque.
+Inside the refrigerator is an egg. The egg is a fluid container. The fluid capacity of the egg is 2.0 fl oz. The fluid content of the egg is 2.0 fl oz. The liquid of the egg is raw egg.
 
-Inside the kitchen is a stovetop. The stovetop is a fixed in place device. Understand "stove" and "oven" as the stovetop. The description of the stovetop is "It's a stovetop with a gas burner and a switch to control it. [If switched on]A ring of flames rises just below the burner grate, atop which [is-are the list of things on the burner grate][otherwise]Sitting atop the burner grate [is-are the list of things on the burner grate][end if]." The initial appearance of the stovetop is "Under the cupboard is a stovetop."
+[If we make the egg closed and opaque, the Measured Liquid extension won't describe it as an "egg of raw egg". But we'll need to do a bit of trickery to secretly "open" it just before the game's pouring rules are consulted, so that it can actually be poured.]
 
-[Because a thing can't be both a device and a supporter, we need to make the supporter a part of the device: we'll call it the burner grate.]
-
-The burner grate is part of the stovetop.
-
-Instead of putting the skillet on the stovetop:
-	try putting the skillet on the burner grate.
-
-A cast-iron skillet is on the burner grate. The skillet is an open, transparent container. The description of the skillet is "It's a pre-seasoned 10-inch skillet."
-
-The egg shell is a thing. The description of the egg shell is "It is all that remains of your formerly unbroken egg."
-
-The pancake-shaped blob is a thing. The description of the blob is "It is a pancake-shaped blob of pancake batter, ready for cooking."
-
-Definition: a thing is egglike if it is the egg.
-Definition: a thing is skillety if it is the skillet.
-
-Understand "crack [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
-Understand "break [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
-Understand "put [a fluid container] in/into/on/onto [a fluid container]" as pouring it into.
-Understand "put [a fluid container] in/into/on/onto [something skillety]" as pouring it into.
-
-The can't put solids into a fluid container rule response (A) is "[The second noun] hold[s] only liquids and other mixable ingredients."
+The egg is closed and opaque.
 
 Before pouring egg into something:
 	now the egg is open.
@@ -68,7 +47,34 @@ Last check pouring egg into something:
 	remove the noun from play;
 	now the egg shell is in the kitchen.
 
-Understand "batter" as pancake batter.
+Definition: a thing is egglike if it is the egg.
+
+Understand "crack [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
+Understand "break [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
+
+The egg shell is a thing. The description of the egg shell is "It is all that remains of your formerly unbroken egg."
+
+Inside the kitchen is a stovetop. The stovetop is a fixed in place device. Understand "stove" and "oven" as the stovetop. The description of the stovetop is "It's a stovetop with a gas burner and a switch to control it. [If switched on]A ring of flames rises just below the burner grate, atop which [is-are the list of things on the burner grate][otherwise]Sitting atop the burner grate [is-are the list of things on the burner grate][end if]." The initial appearance of the stovetop is "Under the cupboard is a stovetop."
+
+[Because the stovetop can't be both a device and a supporter, we need to make the supporter a part of the stovetop: we'll call it the burner grate.]
+
+The burner grate is part of the stovetop.
+
+Instead of putting the skillet on the stovetop:
+	try putting the skillet on the burner grate.
+
+A cast-iron skillet is on the burner grate. The skillet is an open, transparent container. The description of the skillet is "It's a pre-seasoned 10-inch skillet."
+
+The pancake-shaped blob is a thing. The description of the blob is "It is a pancake-shaped blob of pancake batter, ready for cooking."
+
+Instead of taking the pancake-shaped blob, say "That would be very goopy."
+
+Definition: a thing is skillety if it is the skillet.
+
+Understand "put [a fluid container] in/into/on/onto [a fluid container]" as pouring it into.
+Understand "put [a fluid container] in/into/on/onto [something skillety]" as pouring it into.
+
+The can't put solids into a fluid container rule response (A) is "[The second noun] hold[s] only liquids and other mixable ingredients."
 
 Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
 	if the liquid poured is pancake batter:
@@ -80,8 +86,6 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 	otherwise:
 		Say "You should only pour ingredients ready for cooking onto the skillet.";
 		stop the action.
-
-Instead of taking the pancake-shaped blob, say "That would be very goopy."
 
 the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
 
@@ -103,5 +107,7 @@ mix-list	result
 { milky raw egg, pancake mix }	pancake batter
 { eggy pancake mix, milk }	pancake batter
 { milky pancake mix, raw egg}	pancake batter
+
+Understand "batter" as pancake batter.
 
 Test me with "open cupboard / open fridge / put milk into cup / pour pancake mix into cup / crack egg into cup / pour batter into skillet".
