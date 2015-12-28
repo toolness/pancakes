@@ -10,25 +10,6 @@ Include Measured Liquid by Emily Short.
 
 Use mixed liquids.
 
-Table of Liquids (continued)
-liquid	potable	flavor
-pancake mix	false	"ew."
-raw egg	false	"eww."
-milk	true	"It's creamy and refreshingly bland."
-milky pancake mix	true	"It's viscous and bland and could use some egg in it."
-pancake batter	true	"Nom, it's ready to cook!"
-milky raw egg	true	"It's creamy and eggy. Could use some pancake mix."
-eggy pancake mix	true	"It's still very powdery. Could use some milk."
-
-Table of Liquid Mixtures (continued)
-mix-list	result
-{ milk, pancake mix }	milky pancake mix
-{ pancake mix, raw egg }	eggy pancake mix
-{ milk, raw egg }	milky raw egg
-{ milky raw egg, pancake mix }	pancake batter
-{ eggy pancake mix, milk }	pancake batter
-{ milky pancake mix, raw egg}	pancake batter
-
 The kitchen is a room. "You're standing in the open kitchen of your studio apartment. A dark granite counter-top separates you from the rest of your living space; beyond that is a wall-to-wall window through which the sun shines."
 
 when play begins:
@@ -97,5 +78,24 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 Instead of taking the pancake-shaped blob, say "That would be very goopy."
 
 the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
+
+Table of Liquids (continued)
+liquid	potable	flavor
+pancake mix	false	"ew."
+raw egg	false	"eww."
+milk	true	"It's creamy and refreshingly bland."
+milky pancake mix	true	"It's viscous and bland and could use some egg in it."
+pancake batter	true	"Nom, it's ready to cook!"
+milky raw egg	true	"It's creamy and eggy. Could use some pancake mix."
+eggy pancake mix	true	"It's still very powdery. Could use some milk."
+
+Table of Liquid Mixtures (continued)
+mix-list	result
+{ milk, pancake mix }	milky pancake mix
+{ pancake mix, raw egg }	eggy pancake mix
+{ milk, raw egg }	milky raw egg
+{ milky raw egg, pancake mix }	pancake batter
+{ eggy pancake mix, milk }	pancake batter
+{ milky pancake mix, raw egg}	pancake batter
 
 Test me with "open cupboard / open fridge / put milk into cup / pour pancake mix into cup / crack egg into cup / pour batter into skillet".
