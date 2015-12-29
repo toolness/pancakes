@@ -111,6 +111,8 @@ Carry out flipping:
 	remove the noun from play;
 	end the story finally.
 
+[I'm not really sure why I couldn't get the following definition to be described in a single line...]
+
 Definition: a thing is fluid-receiving:
 	if it is the skillet, yes;
 	if it is a fluid container, yes;
