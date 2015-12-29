@@ -152,6 +152,7 @@ mix-list	result
 Understand "milk" as milky pancake mix.
 Understand "milk" as milky raw egg.
 Understand "mix" as pancake mix.
+Understand "mix" as pancake batter.
 Understand "batter" as pancake batter.
 
 Test me with "open cupboard / open fridge / put milk into cup / pour mix into cup / crack egg into cup / pour batter into skillet".
