@@ -49,7 +49,7 @@ Before pouring egg into something:
 Last check pouring egg into something:
 	Say "You crack the egg open by tapping it on the counter-top.";
 	remove the noun from play;
-	now the egg shell is in the kitchen.
+	now the egg shell is in the location.
 
 Definition: a thing is egglike if it is the egg.
 
