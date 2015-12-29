@@ -104,10 +104,11 @@ Check flipping:
 
 Carry out flipping:
 	say "You deftly flip the pancake with the silicone handle of the skillet. After waiting a few moments, you transfer your creation to a plate, pour some syrup on the side, and consume it.";
-	if the cooking stage of the noun is slightly bubbly, say "It was pretty good, albeit slightly undercooked.";
-	if the cooking stage of the noun is rather bubbly, say "It was ridiculously delicious: perfectly golden brown and crisp on the edges.";
-	if the cooking stage of the noun is very bubbly, say "It was quite tasty, albeit slightly burnt in areas.";
-	if the cooking stage of the noun is ridiculously bubbly, say "It was burnt as hell.";
+	if the cooking stage of the noun is:
+		-- slightly bubbly: say "It was pretty good, albeit slightly undercooked.";
+		-- rather bubbly: say "It was ridiculously delicious: perfectly golden brown and crisp on the edges.";
+		-- very bubbly: say "It was quite tasty, albeit slightly burnt in areas.";
+		-- ridiculously bubbly: say "It was burnt as hell.";
 	remove the noun from play;
 	end the story finally.
 
