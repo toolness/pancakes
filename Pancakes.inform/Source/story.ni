@@ -146,6 +146,7 @@ mix-list	result
 { eggy pancake mix, milk }	pancake batter
 { milky pancake mix, raw egg}	pancake batter
 
+Understand "mix" as pancake mix.
 Understand "batter" as pancake batter.
 
-Test me with "open cupboard / open fridge / put milk into cup / pour pancake mix into cup / crack egg into cup / pour batter into skillet".
+Test me with "open cupboard / open fridge / put milk into cup / pour mix into cup / crack egg into cup / pour batter into skillet".
