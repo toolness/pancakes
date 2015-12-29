@@ -52,12 +52,11 @@ Last check pouring egg into something:
 	now the egg shell is in the location.
 
 Definition: a thing is egglike if it is the egg.
-Definition: a thing is unegglike if it is not the egg.
 
 Understand the commands "break" and "crack" as something new.
 
-Understand "crack [something egglike] in/into/on/onto [an unegglike fluid container]" as pouring it into.
-Understand "break [something egglike] in/into/on/onto [an unegglike fluid container]" as pouring it into.
+Understand "crack [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
+Understand "break [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
 
 The egg shell is a thing. The description of the egg shell is "It is all that remains of your formerly unbroken egg."
 
@@ -114,6 +113,8 @@ Carry out flipping:
 
 Definition: a thing is skillety if it is the skillet.
 
+Understand "add [a fluid container] in/into/on/onto/to [a fluid container]" as pouring it into.
+Understand "add [a fluid container] in/into/on/onto/to [something skillety]" as pouring it into.
 Understand "put [a fluid container] in/into/on/onto [a fluid container]" as pouring it into.
 Understand "put [a fluid container] in/into/on/onto [something skillety]" as pouring it into.
 
