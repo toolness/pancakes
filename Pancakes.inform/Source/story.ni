@@ -64,6 +64,8 @@ Inside the kitchen is a stovetop. The stovetop is a fixed in place device. Under
 
 The burner grate is part of the stovetop.
 
+Definition: a thing is heated if it is on the burner grate and the stovetop is switched on.
+
 Instead of putting the skillet on the stovetop:
 	try putting the skillet on the burner grate.
 
@@ -82,12 +84,12 @@ Instead of taking the pancake-shaped blob, say "That would be very goopy."
 Before printing the name of the pancake-shaped blob: say "[cooking stage] ".
 
 Every turn:
-	if the pancake-shaped blob is in the skillet and the stovetop is switched on and the skillet is on the burner grate:
-		if the cooking stage of the pancake-shaped blob is ridiculously bubbly:
-			say "Smoke emanates from the underside of the pancake-shaped blob.";
+	repeat with item running through flippable things in a heated skillety thing:
+		if the cooking stage of the item is ridiculously bubbly:
+			say "Smoke emanates from the underside of the [item].";
 		otherwise:
-			now the cooking stage of the pancake-shaped blob is the cooking stage after the cooking stage of the pancake-shaped blob;
-			say "The pancake-shaped blob is now [the cooking stage of the pancake-shaped blob]."
+			now the cooking stage of the item is the cooking stage after the cooking stage of the item;
+			say "The [the printed name of the item] is now [the cooking stage of the item]."
 
 Flipping is an action applying to one thing.
 Understand "flip [something flippable]" as flipping.
