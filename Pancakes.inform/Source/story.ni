@@ -60,7 +60,7 @@ Understand "break [something egglike] in/into/on/onto [a fluid container]" as po
 
 The egg shell is a thing. The description of the egg shell is "It is all that remains of your formerly unbroken egg."
 
-Inside the kitchen is a stovetop. The stovetop is a fixed in place device. Understand "stove" and "oven" as the stovetop. The description of the stovetop is "It's a stovetop with a gas burner and a switch to control it. [If switched on]A ring of flames rises just below the burner grate, atop which [is-are the list of things on the burner grate][otherwise]Sitting atop the burner grate [is-are the list of things on the burner grate][end if]." The initial appearance of the stovetop is "Under the cupboard is a stovetop."
+Inside the kitchen is a stovetop. The stovetop is a fixed in place device. Understand "stove" and "oven" as the stovetop. The description of the stovetop is "It's a stovetop with a gas burner and a switch to control it. [If switched on]A ring of flames rises just below the burner grate, atop which [is-are a list of things on the burner grate][otherwise]Sitting atop its burner grate [is-are a list of things on the burner grate][end if]." The initial appearance of the stovetop is "Under the cupboard is a stovetop[if the burner grate is not empty] with [a list of things on the burner grate] on it[end if]."
 
 [Because the stovetop can't be both a device and a supporter, we need to make the supporter a part of the stovetop: we'll call it the burner grate.]
 
