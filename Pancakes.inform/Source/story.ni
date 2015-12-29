@@ -52,9 +52,12 @@ Last check pouring egg into something:
 	now the egg shell is in the location.
 
 Definition: a thing is egglike if it is the egg.
+Definition: a thing is unegglike if it is not the egg.
 
-Understand "crack [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
-Understand "break [something egglike] in/into/on/onto [a fluid container]" as pouring it into.
+Understand the commands "break" and "crack" as something new.
+
+Understand "crack [something egglike] in/into/on/onto [an unegglike fluid container]" as pouring it into.
+Understand "break [something egglike] in/into/on/onto [an unegglike fluid container]" as pouring it into.
 
 The egg shell is a thing. The description of the egg shell is "It is all that remains of your formerly unbroken egg."
 
@@ -146,6 +149,8 @@ mix-list	result
 { eggy pancake mix, milk }	pancake batter
 { milky pancake mix, raw egg}	pancake batter
 
+Understand "milk" as milky pancake mix.
+Understand "milk" as milky raw egg.
 Understand "mix" as pancake mix.
 Understand "batter" as pancake batter.
 
