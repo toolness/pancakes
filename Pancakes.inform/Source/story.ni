@@ -86,7 +86,7 @@ Instead of taking the pancake-shaped blob, say "That would be very goopy."
 Before printing the name of the pancake-shaped blob: say "[cooking stage] ".
 
 Every turn:
-	repeat with item running through flippable things in a heated skillety thing:
+	repeat with item running through flippable things in a heated thing:
 		if the cooking stage of the item is ridiculously bubbly:
 			say "Smoke emanates from the underside of the [item].";
 		otherwise:
@@ -111,12 +111,13 @@ Carry out flipping:
 	remove the noun from play;
 	end the story finally.
 
-Definition: a thing is skillety if it is the skillet.
+Definition: a thing is fluid-receiving:
+	if it is the skillet, yes;
+	if it is a fluid container, yes;
+	no.
 
-Understand "add [a fluid container] in/into/on/onto/to [a fluid container]" as pouring it into.
-Understand "add [a fluid container] in/into/on/onto/to [something skillety]" as pouring it into.
-Understand "put [a fluid container] in/into/on/onto [a fluid container]" as pouring it into.
-Understand "put [a fluid container] in/into/on/onto [something skillety]" as pouring it into.
+Understand "add [a fluid container] in/into/on/onto/to [something fluid-receiving]" as pouring it into.
+Understand "put [a fluid container] in/into/on/onto [something fluid-receiving]" as pouring it into.
 
 Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
 	if the liquid poured is pancake batter:
