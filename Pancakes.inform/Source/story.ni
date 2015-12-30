@@ -4,8 +4,6 @@ Release along with an interpreter.
 
 The story creation year is 2015.
 
-[Cover art taken from https://www.flickr.com/photos/kurmanphotos/14136765763]
-
 Release along with cover art ("A stack of pancakes."), a "Pancakes" website, and source text.
 
 Include Measured Liquid by Emily Short.
