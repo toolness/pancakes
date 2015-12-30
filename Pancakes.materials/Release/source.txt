@@ -2,9 +2,11 @@
 
 Release along with an interpreter.
 
+The story creation year is 2015.
+
 [Cover art taken from https://www.flickr.com/photos/kurmanphotos/14136765763]
 
-Release along with cover art ("A stack of pancakes.") and source text.
+Release along with cover art ("A stack of pancakes."), a "Pancakes" website, and source text.
 
 Include Measured Liquid by Emily Short.
 
@@ -112,15 +114,8 @@ Carry out flipping:
 	remove the noun from play;
 	end the story finally.
 
-[I'm not really sure why I couldn't get the following definition to be described in a single line...]
-
-Definition: a thing is fluid-receiving:
-	if it is the skillet, yes;
-	if it is a fluid container, yes;
-	no.
-
-Understand "add [a fluid container] in/into/on/onto/to [something fluid-receiving]" as pouring it into.
-Understand "put [a fluid container] in/into/on/onto [something fluid-receiving]" as pouring it into.
+Understand "add [a fluid container] in/into/on/onto/to [something]" as pouring it into.
+Understand "put [a fluid container] in/into/on/onto [something]" as pouring it into.
 
 Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
 	if the liquid poured is pancake batter:
