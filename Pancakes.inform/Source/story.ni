@@ -31,8 +31,6 @@ The instructions are part of the box. The description of the instructions is "'C
 
 Inside the cupboard is a massive measuring cup. The massive measuring cup is a graduated fluid container. The fluid capacity of the massive measuring cup is 32.0 fl oz. The description of the massive measuring cup is "The massive measuring cup is approximately the size of your head. It is made of thick glass and has the word 'pyrex' written on it in a red font that looks like it's from the 1970s."
 
-Inside the kitchen is a window. The window is scenery. The description of the window is "Through the window you see the gray rooftops of the brick dwellings outside. Above them is a clear blue sky.".
-
 Inside the kitchen is a closed, openable, fixed in place container called a refrigerator. The description of the refrigerator is "The refrigerator is made of shiny brushed metal." Understand "fridge" as refrigerator. The initial appearance of the refrigerator is "Next to the cupboard sits a refrigerator."
 
 Inside the refrigerator is a carton. The carton is a fluid container. The fluid capacity of the carton is 64.0 fl oz. The fluid content of the carton is 4.0 fl oz. The liquid of the carton is milk. The description of the carton is "A half-gallon cardboard carton of milk from the grocery store."
@@ -152,5 +150,17 @@ Understand "milk" as milky raw egg.
 Understand "mix" as pancake mix.
 Understand "mix" as pancake batter.
 Understand "batter" as pancake batter.
+
+[When looking out the window, we'd like to show the real-world weather outside if possible. An external program/script may have written it to a file; if so, we'll use that, but otherwise we'll just fallback to a default.]
+
+Inside the kitchen is a window. The window is scenery. Understand "sky" and "outside" as the window. The description of the window is "Through the window you see the gray rooftops of the brick dwellings outside. Above them is a [cloudiness] sky."
+
+The file of weather (owned by project "WEATHER-API") is called "weather".
+
+to decide what text is cloudiness:
+	if ready to read the file of weather:
+		decide on "[text of the file of weather]";
+	otherwise:
+		decide on "clear blue".
 
 Test me with "open cupboard / open fridge / put milk into cup / pour mix into cup / crack egg into cup / pour batter into skillet".
