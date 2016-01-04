@@ -132,6 +132,19 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 
 the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
 
+A liquid can be mixable. A liquid is usually not mixable.
+
+A liquid can be well-mixed. A liquid is usually not well-mixed.
+
+After examining a fluid container (called the target):
+	if the target is open and the liquid of the target is mixable:
+		if the liquid of the target is well-mixed:
+			say "The [liquid of the target] is nicely blended.";
+		otherwise:
+			say "The [liquid of the target] is not very well-blended. It's rather lumpy, really.".
+
+raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter are mixable.
+
 [Some players expect to be able to mix the liquids, but our world model doesn't account for this, as mixtures just "appear" once the ingredients are poured together. To satisfy these players and convince them that they're not stuck, however, we'll implement a purely decorative stirring action.]
 
 A thing can be stir-inducing.
@@ -148,10 +161,17 @@ Understand "mix [a fluid container] with [something stir-inducing]" as stirring.
 Check an actor stirring something:
 	if the fluid content of the noun is 0.0 fl oz:
 		say "But there's nothing in [the noun] to stir!";
+		stop the action;
+	if the liquid of the noun is not mixable:
+		say "You can't blend the [liquid of the noun] any further.";
+		stop the action;
+	if the liquid of the noun is well-mixed:
+		say "You've already blended the [liquid of the noun] quite superbly.";
 		stop the action.
 
 Carry out stirring:
-	say "You vigorously stir the [liquid of the noun] in the [printed name of the noun] with [the second noun].";
+	say "You vigorously stir the [liquid of the noun] with [the second noun].";
+	now the liquid of the noun is well-mixed.
 
 Table of Liquids (continued)
 liquid	potable	flavor
