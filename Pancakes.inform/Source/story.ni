@@ -37,7 +37,7 @@ Inside the refrigerator is a carton. The carton is a fluid container. The fluid 
 
 Inside the refrigerator is an egg. The egg is a fluid container. The fluid capacity of the egg is 2.0 fl oz. The fluid content of the egg is 2.0 fl oz. The liquid of the egg is raw egg.
 
-[If we make the egg closed and opaque, the Measured Liquid extension won't describe it as an "egg of raw egg". But we'll need to do a bit of trickery to secretly "open" it just before the game's pouring rules are consulted, so that it can actually be poured.]
+[By default, the Measured Liquid extension will describe our egg as an "egg of raw egg", which is rather redundant.  We can get around this if we make the egg closed and opaque. But we'll need to do a bit of trickery to secretly "open" it just before the game's pouring rules are consulted, so that it can actually be poured.]
 
 The egg is closed and opaque.
 
