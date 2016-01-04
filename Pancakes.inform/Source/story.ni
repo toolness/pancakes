@@ -71,6 +71,12 @@ Instead of putting the skillet on the stovetop:
 
 A cast-iron skillet is on the burner grate. The skillet is an open, transparent container. The description of the skillet is "It's a pre-seasoned, cast iron 10-inch skillet. Virtually indestructible, it doubles up as an excellent source of nutritional iron. A heat-resistant silicone handle allows you to wield it under extreme heat." Understand "pan" as the skillet.
 
+[The terminology behind the word "spatula" is bizarre: http://english.stackexchange.com/questions/161554/in-the-context-of-cooking-what-is-the-difference-between-flipper-and-spatula]
+
+A thing can be flip-inducing.
+
+A spatula is a flip-inducing thing in the kitchen. The description of the spatula is "A flat, black silicone pallet attached at an angle to the handle, used for flipping things. Apparently internet merchants refer to this as a 'flipper' or 'turner', but you grew up calling it a spatula.". Understand "flipper" and "turner" as the spatula.
+
 Cooking stage is a kind of value.  The cooking stages are goopy, slightly bubbly, rather bubbly, very bubbly, and ridiculously bubbly. 
 
 A thing can be flippable.
@@ -91,9 +97,9 @@ Every turn:
 			now the cooking stage of the item is the cooking stage after the cooking stage of the item;
 			say "The [the printed name of the item] is now [the cooking stage of the item]."
 
-Flipping is an action applying to one thing.
-Understand "flip [something flippable]" as flipping.
-Understand "turn [something flippable]" as flipping.
+Flipping is an action applying to two things.
+Understand "flip [something flippable] with [something flip-inducing]" as flipping.
+Understand "turn [something flippable] with [something flip-inducing]" as flipping.
 
 Check flipping:
 	if the cooking stage of the noun is goopy:
@@ -101,7 +107,7 @@ Check flipping:
 		stop the action.
 
 Carry out flipping:
-	say "You deftly flip the pancake with the silicone handle of the skillet. After waiting a few moments, you transfer your creation to a plate, pour some syrup on the side, and consume it.";
+	say "You deftly flip [the noun] with [the second noun]. After waiting a few moments, you transfer your creation to a plate, pour some syrup on the side, and consume it.";
 	if the cooking stage of the noun is:
 		-- slightly bubbly: say "It was pretty good, albeit slightly undercooked.";
 		-- rather bubbly: say "It was ridiculously delicious: perfectly golden brown and crisp on the edges.";
