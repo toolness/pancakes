@@ -126,6 +126,20 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 
 the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
 
+[Some players expect to be able to mix the liquids, but our world model doesn't account for this, as mixtures just "appear" once the ingredients are poured together. To satisfy these players and convince them that they're not stuck, however, we'll implement a purely decorative stirring action.]
+
+Stirring is an action applying to one thing.
+Understand "stir [a fluid container]" as stirring.
+Understand "mix [a fluid container]" as stirring.
+
+Check an actor stirring something:
+	if the fluid content of the noun is 0.0 fl oz:
+		say "But there's nothing in [the noun] to stir!";
+		stop the action.
+
+Carry out stirring:
+	say "You vigorously stir the [liquid of the noun] in the [printed name of the noun].";
+
 Table of Liquids (continued)
 liquid	potable	flavor
 pancake mix	false	"ew."
