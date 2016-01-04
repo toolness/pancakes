@@ -134,9 +134,16 @@ the pouring batter into skillets rule is listed after the can't pour two untouch
 
 [Some players expect to be able to mix the liquids, but our world model doesn't account for this, as mixtures just "appear" once the ingredients are poured together. To satisfy these players and convince them that they're not stuck, however, we'll implement a purely decorative stirring action.]
 
-Stirring is an action applying to one thing.
-Understand "stir [a fluid container]" as stirring.
-Understand "mix [a fluid container]" as stirring.
+A thing can be stir-inducing.
+
+The whisk is a stir-inducing thing in the kitchen. The description of the whisk is "A bulbous metallic instrument used for blending ingredients."
+
+Stirring is an action applying to two things.
+Understand "stir [a fluid container] with [something stir-inducing]" as stirring.
+Understand "blend [a fluid container] with [something stir-inducing]" as stirring.
+Understand "whisk [a fluid container] with [something stir-inducing]" as stirring.
+Understand "beat [a fluid container] with [something stir-inducing]" as stirring.
+Understand "mix [a fluid container] with [something stir-inducing]" as stirring.
 
 Check an actor stirring something:
 	if the fluid content of the noun is 0.0 fl oz:
@@ -144,7 +151,7 @@ Check an actor stirring something:
 		stop the action.
 
 Carry out stirring:
-	say "You vigorously stir the [liquid of the noun] in the [printed name of the noun].";
+	say "You vigorously stir the [liquid of the noun] in the [printed name of the noun] with [the second noun].";
 
 Table of Liquids (continued)
 liquid	potable	flavor
