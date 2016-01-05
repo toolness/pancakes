@@ -37,7 +37,7 @@ Inside the refrigerator is a carton. The carton is a fluid container. The fluid 
 
 Inside the refrigerator is an egg. The egg is a fluid container. The fluid capacity of the egg is 2.0 fl oz. The fluid content of the egg is 2.0 fl oz. The liquid of the egg is raw egg.
 
-[If we make the egg closed and opaque, the Measured Liquid extension won't describe it as an "egg of raw egg". But we'll need to do a bit of trickery to secretly "open" it just before the game's pouring rules are consulted, so that it can actually be poured.]
+[By default, the Measured Liquid extension will describe our egg as an "egg of raw egg", which is rather redundant.  We can get around this if we make the egg closed and opaque. But we'll need to do a bit of trickery to secretly "open" it just before the game's pouring rules are consulted, so that it can actually be poured.]
 
 The egg is closed and opaque.
 
@@ -71,17 +71,24 @@ Instead of putting the skillet on the stovetop:
 
 A cast-iron skillet is on the burner grate. The skillet is an open, transparent container. The description of the skillet is "It's a pre-seasoned, cast iron 10-inch skillet. Virtually indestructible, it doubles up as an excellent source of nutritional iron. A heat-resistant silicone handle allows you to wield it under extreme heat." Understand "pan" as the skillet.
 
+[The terminology behind the word "spatula" is bizarre: http://english.stackexchange.com/questions/161554/in-the-context-of-cooking-what-is-the-difference-between-flipper-and-spatula]
+
+A thing can be flip-inducing.
+
+A spatula is a flip-inducing thing in the kitchen. The description of the spatula is "A flat, black silicone pallet attached at an angle to the handle, used for flipping things. Apparently internet merchants refer to this as a 'flipper' or 'turner', but you grew up calling it a spatula.". Understand "flipper" and "turner" as the spatula.
+
 Cooking stage is a kind of value.  The cooking stages are goopy, slightly bubbly, rather bubbly, very bubbly, and ridiculously bubbly. 
 
 A thing can be flippable.
+A thing can be lumpy.
 
-The pancake-shaped blob is a flippable thing. The description of the blob is "It is a pancake-shaped blob of pancake batter. It is currently [the cooking stage]." Understand "pancake" as the pancake-shaped blob.
+The pancake-shaped blob is a flippable, lumpy thing. The description of the blob is "It is a [if lumpy]lumpy, [end if]pancake-shaped blob of pancake batter. It is currently [the cooking stage]." Understand "pancake" as the pancake-shaped blob.
 
 The pancake-shaped blob has a cooking stage. The cooking stage of the pancake-shaped blob is goopy.
 
 Instead of eating the pancake-shaped blob, say "But it's not fully cooked yet!"
 Instead of taking the pancake-shaped blob, say "That would be very goopy."
-Before printing the name of the pancake-shaped blob: say "[cooking stage] ".
+Before printing the name of the pancake-shaped blob: say "[if lumpy]lumpy, [end if][cooking stage] ".
 
 Every turn:
 	repeat with item running through flippable things in a heated thing:
@@ -91,9 +98,9 @@ Every turn:
 			now the cooking stage of the item is the cooking stage after the cooking stage of the item;
 			say "The [the printed name of the item] is now [the cooking stage of the item]."
 
-Flipping is an action applying to one thing.
-Understand "flip [something flippable]" as flipping.
-Understand "turn [something flippable]" as flipping.
+Flipping is an action applying to two things.
+Understand "flip [something flippable] with [something flip-inducing]" as flipping.
+Understand "turn [something flippable] with [something flip-inducing]" as flipping.
 
 Check flipping:
 	if the cooking stage of the noun is goopy:
@@ -101,12 +108,12 @@ Check flipping:
 		stop the action.
 
 Carry out flipping:
-	say "You deftly flip the pancake with the silicone handle of the skillet. After waiting a few moments, you transfer your creation to a plate, pour some syrup on the side, and consume it.";
+	say "You deftly flip [the noun] with [the second noun]. After waiting a few moments, you transfer your creation to a plate, pour some syrup on the side, and consume it.";
 	if the cooking stage of the noun is:
-		-- slightly bubbly: say "It was pretty good, albeit slightly undercooked.";
-		-- rather bubbly: say "It was ridiculously delicious: perfectly golden brown and crisp on the edges.";
-		-- very bubbly: say "It was quite tasty, albeit slightly burnt in areas.";
-		-- ridiculously bubbly: say "It was burnt as hell.";
+		-- slightly bubbly: say "It was pretty good, albeit slightly undercooked[if the noun is lumpy] and lumpy[end if].";
+		-- rather bubbly: say "It was [if the noun is lumpy]lumpy but still fairly[otherwise]ridiculously[end if] delicious: perfectly golden brown and crisp on the edges.";
+		-- very bubbly: say "It was quite tasty, albeit slightly burnt in areas[if the noun is lumpy], while lumpy in others[end if].";
+		-- ridiculously bubbly: say "It was burnt[if the noun is lumpy] and lumpy[end if] as hell.";
 	remove the noun from play;
 	end the story finally.
 
@@ -118,13 +125,54 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 		if the fluid content of the noun is greater than 0.0 fl oz:
 			Now the fluid content of the noun is 0.0 fl oz;
 			Now the pancake-shaped blob is in the skillet;
-			Say "You pour the pancake batter into a pancake-shaped blob on the skillet.";
+			if the liquid poured is well-mixed:
+				now the pancake-shaped blob is not lumpy;
+			Say "You pour the pancake batter into a [pancake-shaped blob] on the skillet.";
 			stop the action;
 	otherwise:
 		Say "You should only pour ingredients ready for cooking onto the skillet.";
 		stop the action.
 
 the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
+
+A liquid can be mixable. A liquid is usually not mixable.
+
+A liquid can be well-mixed. A liquid is usually not well-mixed.
+
+After examining a fluid container (called the target):
+	if the target is open and the liquid of the target is mixable:
+		if the liquid of the target is well-mixed:
+			say "The [liquid of the target] is nicely blended.";
+		otherwise:
+			say "The [liquid of the target] is not very well-blended. It's rather lumpy, really.".
+
+raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter are mixable.
+
+A thing can be stir-inducing.
+
+The whisk is a stir-inducing thing in the kitchen. The description of the whisk is "A bulbous metallic instrument used for blending ingredients."
+
+Stirring is an action applying to two things.
+Understand "stir [a fluid container] with [something stir-inducing]" as stirring.
+Understand "blend [a fluid container] with [something stir-inducing]" as stirring.
+Understand "whisk [a fluid container] with [something stir-inducing]" as stirring.
+Understand "beat [a fluid container] with [something stir-inducing]" as stirring.
+Understand "mix [a fluid container] with [something stir-inducing]" as stirring.
+
+Check an actor stirring something:
+	if the fluid content of the noun is 0.0 fl oz:
+		say "But there's nothing in [the noun] to stir!";
+		stop the action;
+	if the liquid of the noun is not mixable:
+		say "You can't blend the [liquid of the noun] any further.";
+		stop the action;
+	if the liquid of the noun is well-mixed:
+		say "You've already blended the [liquid of the noun] quite superbly.";
+		stop the action.
+
+Carry out stirring:
+	say "You vigorously stir the [liquid of the noun] with [the second noun].";
+	now the liquid of the noun is well-mixed.
 
 Table of Liquids (continued)
 liquid	potable	flavor
@@ -163,4 +211,4 @@ to decide what text is cloudiness:
 	otherwise:
 		decide on "clear blue".
 
-Test me with "open cupboard / open fridge / put milk into cup / pour mix into cup / crack egg into cup / pour batter into skillet".
+Test me with "open cupboard / open fridge / put milk into cup / pour mix into cup / crack egg into cup / stir batter / pour batter into skillet".
