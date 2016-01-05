@@ -165,13 +165,15 @@ The pancake-shaped blob is a thing. The description of the blob is "It is a [if 
 Understand "add [a fluid container] in/into/on/onto/to [something]" as pouring it into.
 Understand "put [a fluid container] in/into/on/onto [something]" as pouring it into.
 
+A thing can be lumpy.
+
 Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
 	if the liquid poured is pancake batter:
 		if the noun is not empty:
 			now the fluid content of the noun is 0.0 fl oz;
 			now the pancake-shaped blob is in the skillet;
-			if the liquid poured is well-stirred:
-				now the pancake-shaped blob is not lumpy;
+			if the liquid poured is not well-stirred:
+				now the pancake-shaped blob is lumpy;
 			say "You pour the pancake batter into a [pancake-shaped blob] on the skillet.";
 			stop the action;
 	otherwise:
@@ -181,8 +183,6 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 The pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
 
 Chapter 2 - Cooking It
-
-A thing can be lumpy. The pancake-shaped blob is lumpy.
 
 Cooking stage is a kind of value.  The cooking stages are goopy, slightly bubbly, rather bubbly, very bubbly, and ridiculously bubbly. 
 
