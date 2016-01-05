@@ -123,7 +123,7 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 		if the fluid content of the noun is greater than 0.0 fl oz:
 			Now the fluid content of the noun is 0.0 fl oz;
 			Now the pancake-shaped blob is in the skillet;
-			if the liquid poured is well-mixed:
+			if the liquid poured is well-stirred:
 				now the pancake-shaped blob is not lumpy;
 			Say "You pour the pancake batter into a [pancake-shaped blob] on the skillet.";
 			stop the action;
@@ -133,18 +133,18 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 
 the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
 
-A liquid can be mixable. A liquid is usually not mixable.
+A liquid can be stirrable. A liquid is usually not stirrable.
 
-A liquid can be well-mixed. A liquid is usually not well-mixed.
+A liquid can be well-stirred. A liquid is usually not well-stirred.
 
 After examining a fluid container (called the target):
-	if the target is open and the liquid of the target is mixable:
-		if the liquid of the target is well-mixed:
+	if the target is open and the liquid of the target is stirrable:
+		if the liquid of the target is well-stirred:
 			say "The [liquid of the target] is nicely blended.";
 		otherwise:
 			say "The [liquid of the target] is not very well-blended. It's rather lumpy, really.".
 
-raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter are mixable.
+raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter are stirrable.
 
 A thing can be stir-inducing.
 
@@ -161,16 +161,16 @@ Check an actor stirring something:
 	if the fluid content of the noun is 0.0 fl oz:
 		say "But there's nothing in [the noun] to stir!";
 		stop the action;
-	if the liquid of the noun is not mixable:
+	if the liquid of the noun is not stirrable:
 		say "You can't blend the [liquid of the noun] any further.";
 		stop the action;
-	if the liquid of the noun is well-mixed:
+	if the liquid of the noun is well-stirred:
 		say "You've already blended the [liquid of the noun] quite superbly.";
 		stop the action.
 
 Carry out stirring:
 	say "You vigorously stir the [liquid of the noun] with [the second noun].";
-	now the liquid of the noun is well-mixed.
+	now the liquid of the noun is well-stirred.
 
 Table of Liquids (continued)
 liquid	potable	flavor
