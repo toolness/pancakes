@@ -120,7 +120,7 @@ Understand "put [a fluid container] in/into/on/onto [something]" as pouring it i
 
 Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
 	if the liquid poured is pancake batter:
-		if the fluid content of the noun is greater than 0.0 fl oz:
+		if the noun is not empty:
 			Now the fluid content of the noun is 0.0 fl oz;
 			Now the pancake-shaped blob is in the skillet;
 			if the liquid poured is well-stirred:
