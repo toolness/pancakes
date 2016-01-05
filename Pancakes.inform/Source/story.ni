@@ -79,76 +79,7 @@ Instead of putting the skillet on the stovetop:
 
 A cast-iron skillet is on the burner grate. The skillet is an open, transparent container. The description of the skillet is "It's a pre-seasoned, cast iron 10-inch skillet. Virtually indestructible, it doubles up as an excellent source of nutritional iron. A heat-resistant silicone handle allows you to wield it under extreme heat." Understand "pan" as the skillet.
 
-Part 4 - The Pancake-Shaped Blob
-
-The pancake-shaped blob is a thing. The description of the blob is "It is a [if lumpy]lumpy, [end if]pancake-shaped blob of pancake batter. It is currently [the cooking stage]." Understand "pancake" as the pancake-shaped blob.
-
-Chapter 1 - Creating It
-
-Understand "add [a fluid container] in/into/on/onto/to [something]" as pouring it into.
-Understand "put [a fluid container] in/into/on/onto [something]" as pouring it into.
-
-Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
-	if the liquid poured is pancake batter:
-		if the noun is not empty:
-			Now the fluid content of the noun is 0.0 fl oz;
-			Now the pancake-shaped blob is in the skillet;
-			if the liquid poured is well-stirred:
-				now the pancake-shaped blob is not lumpy;
-			Say "You pour the pancake batter into a [pancake-shaped blob] on the skillet.";
-			stop the action;
-	otherwise:
-		Say "You should only pour ingredients ready for cooking onto the skillet.";
-		stop the action.
-
-the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
-
-Chapter 2 - Cooking It
-
-A thing can be lumpy. The pancake-shaped blob is lumpy.
-
-Cooking stage is a kind of value.  The cooking stages are goopy, slightly bubbly, rather bubbly, very bubbly, and ridiculously bubbly. 
-
-The pancake-shaped blob has a cooking stage. The cooking stage of the pancake-shaped blob is goopy.
-
-Instead of eating the pancake-shaped blob, say "But it's not fully cooked yet!"
-Instead of taking the pancake-shaped blob, say "That would be very goopy."
-Before printing the name of the pancake-shaped blob: say "[if lumpy]lumpy, [end if][cooking stage] ".
-
-Every turn:
-	repeat with item running through flippable things in a heated thing:
-		if the cooking stage of the item is ridiculously bubbly:
-			say "Smoke emanates from the underside of the [item].";
-		otherwise:
-			now the cooking stage of the item is the cooking stage after the cooking stage of the item;
-			say "The [the printed name of the item] is now [the cooking stage of the item]."
-
-Chapter 3 - Flipping It
-
-A thing can be flippable. The pancake-shaped blob is flippable.
-
-A thing can be flip-inducing. The spatula is flip-inducing.
-
-Flipping is an action applying to two things.
-Understand "flip [something flippable] with [something flip-inducing]" as flipping.
-Understand "turn [something flippable] with [something flip-inducing]" as flipping.
-
-Check flipping:
-	if the cooking stage of the noun is goopy:
-		say "But [the noun] isn't cooked at all!";
-		stop the action.
-
-Carry out flipping:
-	say "You deftly flip [the noun] with [the second noun]. After waiting a few moments, you transfer your creation to a plate, pour some syrup on the side, and consume it.";
-	if the cooking stage of the noun is:
-		-- slightly bubbly: say "It was pretty good, albeit slightly undercooked[if the noun is lumpy] and lumpy[end if].";
-		-- rather bubbly: say "It was [if the noun is lumpy]lumpy but still fairly[otherwise]ridiculously[end if] delicious: perfectly golden brown and crisp on the edges.";
-		-- very bubbly: say "It was quite tasty, albeit slightly burnt in areas[if the noun is lumpy], while lumpy in others[end if].";
-		-- ridiculously bubbly: say "It was burnt[if the noun is lumpy] and lumpy[end if] as hell.";
-	remove the noun from play;
-	end the story finally.
-
-Part 5 - Mixable Ingredients
+Part 4 - Mixable Ingredients
 
 Chapter 1 - Pancake Mix
 
@@ -226,6 +157,75 @@ Understand "mix" as pancake batter.
 
 Understand "mix" as pancake mix.
 Understand "batter" as pancake batter.
+
+Part 5 - The Pancake-Shaped Blob
+
+The pancake-shaped blob is a thing. The description of the blob is "It is a [if lumpy]lumpy, [end if]pancake-shaped blob of pancake batter. It is currently [the cooking stage]." Understand "pancake" as the pancake-shaped blob.
+
+Chapter 1 - Creating It
+
+Understand "add [a fluid container] in/into/on/onto/to [something]" as pouring it into.
+Understand "put [a fluid container] in/into/on/onto [something]" as pouring it into.
+
+Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
+	if the liquid poured is pancake batter:
+		if the noun is not empty:
+			Now the fluid content of the noun is 0.0 fl oz;
+			Now the pancake-shaped blob is in the skillet;
+			if the liquid poured is well-stirred:
+				now the pancake-shaped blob is not lumpy;
+			Say "You pour the pancake batter into a [pancake-shaped blob] on the skillet.";
+			stop the action;
+	otherwise:
+		Say "You should only pour ingredients ready for cooking onto the skillet.";
+		stop the action.
+
+the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
+
+Chapter 2 - Cooking It
+
+A thing can be lumpy. The pancake-shaped blob is lumpy.
+
+Cooking stage is a kind of value.  The cooking stages are goopy, slightly bubbly, rather bubbly, very bubbly, and ridiculously bubbly. 
+
+The pancake-shaped blob has a cooking stage. The cooking stage of the pancake-shaped blob is goopy.
+
+Instead of eating the pancake-shaped blob, say "But it's not fully cooked yet!"
+Instead of taking the pancake-shaped blob, say "That would be very goopy."
+Before printing the name of the pancake-shaped blob: say "[if lumpy]lumpy, [end if][cooking stage] ".
+
+Every turn:
+	repeat with item running through flippable things in a heated thing:
+		if the cooking stage of the item is ridiculously bubbly:
+			say "Smoke emanates from the underside of the [item].";
+		otherwise:
+			now the cooking stage of the item is the cooking stage after the cooking stage of the item;
+			say "The [the printed name of the item] is now [the cooking stage of the item]."
+
+Chapter 3 - Flipping It
+
+A thing can be flippable. The pancake-shaped blob is flippable.
+
+A thing can be flip-inducing. The spatula is flip-inducing.
+
+Flipping is an action applying to two things.
+Understand "flip [something flippable] with [something flip-inducing]" as flipping.
+Understand "turn [something flippable] with [something flip-inducing]" as flipping.
+
+Check flipping:
+	if the cooking stage of the noun is goopy:
+		say "But [the noun] isn't cooked at all!";
+		stop the action.
+
+Carry out flipping:
+	say "You deftly flip [the noun] with [the second noun]. After waiting a few moments, you transfer your creation to a plate, pour some syrup on the side, and consume it.";
+	if the cooking stage of the noun is:
+		-- slightly bubbly: say "It was pretty good, albeit slightly undercooked[if the noun is lumpy] and lumpy[end if].";
+		-- rather bubbly: say "It was [if the noun is lumpy]lumpy but still fairly[otherwise]ridiculously[end if] delicious: perfectly golden brown and crisp on the edges.";
+		-- very bubbly: say "It was quite tasty, albeit slightly burnt in areas[if the noun is lumpy], while lumpy in others[end if].";
+		-- ridiculously bubbly: say "It was burnt[if the noun is lumpy] and lumpy[end if] as hell.";
+	remove the noun from play;
+	end the story finally.
 
 Part 6 - The Window
 
