@@ -235,7 +235,7 @@ Inside the kitchen is a window. The window is scenery. Understand "sky" and "out
 
 The file of weather (owned by project "WEATHER-API") is called "weather".
 
-to decide what text is cloudiness:
+To decide what text is cloudiness:
 	if ready to read the file of weather:
 		decide on "[text of the file of weather]";
 	otherwise:
