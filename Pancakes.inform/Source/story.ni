@@ -8,10 +8,10 @@ Release along with cover art ("A stack of pancakes."), a "Pancakes" website, and
 
 Include Measured Liquid by Emily Short. Use mixed liquids.
 
-The kitchen is a room. "You're standing in the open kitchen of your studio apartment. A dark granite counter-top separates you from the rest of your living space; beyond that is a wall-to-wall window through which the sun shines."
-
 when play begins:
 	say "Ah, it's a beautiful Saturday morning. The perfect time to make a delicious, relaxing breakfast!"
+
+The kitchen is a room. "You're standing in the open kitchen of your studio apartment. A dark granite counter-top separates you from the rest of your living space; beyond that is a wall-to-wall window through which the sun shines."
 
 Inside the kitchen is a closed, openable, fixed in place container called a cupboard. The description of the cupboard is "The cupboard has a dark oaky texture to it; you can't tell whether it's fake or made of real wood. [if the cupboard is closed]A brushed metal handle can be used to open it.[end if]". The initial appearance of the cupboard is "Just above your head, a cupboard is affixed to the wall.".
 
@@ -133,9 +133,9 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 
 the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
 
-A liquid can be stirrable. A liquid is usually not stirrable.
+A liquid can be stirrable. raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter are stirrable.
 
-A liquid can be well-stirred. A liquid is usually not well-stirred.
+A liquid can be well-stirred.
 
 After examining a fluid container (called the target):
 	if the target is open and the liquid of the target is stirrable:
@@ -143,8 +143,6 @@ After examining a fluid container (called the target):
 			say "The [liquid of the target] is nicely blended.";
 		otherwise:
 			say "The [liquid of the target] is not very well-blended. It's rather lumpy, really.".
-
-raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter are stirrable.
 
 A thing can be stir-inducing.
 
