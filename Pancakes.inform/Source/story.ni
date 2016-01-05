@@ -75,7 +75,7 @@ A cast-iron skillet is on the burner grate. The skillet is an open, transparent 
 
 A thing can be flip-inducing.
 
-A spatula is a flip-inducing thing in the kitchen. The description of the spatula is "A flat, black silicone pallet attached at an angle to the handle, used for flipping things. Apparently internet merchants refer to this as a 'flipper' or 'turner', but you grew up calling it a spatula.". Understand "flipper" and "turner" as the spatula.
+A spatula is a flip-inducing thing in the cupboard. The description of the spatula is "A flat, black silicone pallet attached at an angle to the handle, used for flipping things. Apparently internet merchants refer to this as a 'flipper' or 'turner', but you grew up calling it a spatula.". Understand "flipper" and "turner" as the spatula.
 
 Cooking stage is a kind of value.  The cooking stages are goopy, slightly bubbly, rather bubbly, very bubbly, and ridiculously bubbly. 
 
@@ -150,7 +150,7 @@ raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter 
 
 A thing can be stir-inducing.
 
-The whisk is a stir-inducing thing in the kitchen. The description of the whisk is "A bulbous metallic instrument used for blending ingredients."
+The whisk is a stir-inducing thing in the cupboard. The description of the whisk is "A bulbous metallic instrument used for blending ingredients."
 
 Stirring is an action applying to two things.
 Understand "stir [a fluid container] with [something stir-inducing]" as stirring.
