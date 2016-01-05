@@ -80,8 +80,9 @@ A spatula is a flip-inducing thing in the kitchen. The description of the spatul
 Cooking stage is a kind of value.  The cooking stages are goopy, slightly bubbly, rather bubbly, very bubbly, and ridiculously bubbly. 
 
 A thing can be flippable.
+A thing can be lumpy.
 
-The pancake-shaped blob is a flippable thing. The description of the blob is "It is a pancake-shaped blob of pancake batter. It is currently [the cooking stage]." Understand "pancake" as the pancake-shaped blob.
+The pancake-shaped blob is a flippable, lumpy thing. The description of the blob is "It is a [if lumpy]lumpy, [end if]pancake-shaped blob of pancake batter. It is currently [the cooking stage]." Understand "pancake" as the pancake-shaped blob.
 
 The pancake-shaped blob has a cooking stage. The cooking stage of the pancake-shaped blob is goopy.
 
@@ -109,10 +110,10 @@ Check flipping:
 Carry out flipping:
 	say "You deftly flip [the noun] with [the second noun]. After waiting a few moments, you transfer your creation to a plate, pour some syrup on the side, and consume it.";
 	if the cooking stage of the noun is:
-		-- slightly bubbly: say "It was pretty good, albeit slightly undercooked.";
-		-- rather bubbly: say "It was ridiculously delicious: perfectly golden brown and crisp on the edges.";
-		-- very bubbly: say "It was quite tasty, albeit slightly burnt in areas.";
-		-- ridiculously bubbly: say "It was burnt as hell.";
+		-- slightly bubbly: say "It was pretty good, albeit slightly undercooked[if the noun is lumpy] and lumpy[end if].";
+		-- rather bubbly: say "It was [if the noun is lumpy]lumpy but still fairly[otherwise]ridiculously[end if] delicious: perfectly golden brown and crisp on the edges.";
+		-- very bubbly: say "It was quite tasty, albeit slightly burnt in areas[if the noun is lumpy], while lumpy in others[end if].";
+		-- ridiculously bubbly: say "It was burnt[if the noun is lumpy] and lumpy[end if] as hell.";
 	remove the noun from play;
 	end the story finally.
 
@@ -124,7 +125,9 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 		if the fluid content of the noun is greater than 0.0 fl oz:
 			Now the fluid content of the noun is 0.0 fl oz;
 			Now the pancake-shaped blob is in the skillet;
-			Say "You pour the pancake batter into a pancake-shaped blob on the skillet.";
+			if the liquid poured is well-mixed:
+				now the pancake-shaped blob is not lumpy;
+			Say "You pour the pancake batter into a [if the pancake-shaped blob is lumpy]lumpy, [end if]pancake-shaped blob on the skillet.";
 			stop the action;
 	otherwise:
 		Say "You should only pour ingredients ready for cooking onto the skillet.";
@@ -144,8 +147,6 @@ After examining a fluid container (called the target):
 			say "The [liquid of the target] is not very well-blended. It's rather lumpy, really.".
 
 raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter are mixable.
-
-[Some players expect to be able to mix the liquids, but our world model doesn't account for this, as mixtures just "appear" once the ingredients are poured together. To satisfy these players and convince them that they're not stuck, however, we'll implement a purely decorative stirring action.]
 
 A thing can be stir-inducing.
 
@@ -210,4 +211,4 @@ to decide what text is cloudiness:
 	otherwise:
 		decide on "clear blue".
 
-Test me with "open cupboard / open fridge / put milk into cup / pour mix into cup / crack egg into cup / pour batter into skillet".
+Test me with "open cupboard / open fridge / put milk into cup / pour mix into cup / crack egg into cup / stir batter / pour batter into skillet".
