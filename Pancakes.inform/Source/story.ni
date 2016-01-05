@@ -91,6 +91,8 @@ The egg shell is a thing. The description of the egg shell is "It is all that re
 
 Chapter 3 - Stirring
 
+[The Measured Liquid extension's default mixing rules don't have a concept for stirring/blending: simply pouring one liquid into another will result in a new liquid. So we'll add some of our own logic for it here.]
+
 A liquid can be stirrable. Raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter are stirrable.
 
 A liquid can be well-stirred.
@@ -127,6 +129,8 @@ Carry out stirring:
 	now the liquid of the noun is well-stirred.
 
 Chapter 4 - Liquids and Their Mixtures
+
+[These tables are originally defined in the Measured Liquid extension.]
 
 Table of Liquids (continued)
 liquid	potable	flavor
