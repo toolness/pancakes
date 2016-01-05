@@ -13,7 +13,17 @@ when play begins:
 
 The kitchen is a room. "You're standing in the open kitchen of your studio apartment. A dark granite counter-top separates you from the rest of your living space; beyond that is a wall-to-wall window through which the sun shines."
 
+Part 1 - The Cupboard
+
 Inside the kitchen is a closed, openable, fixed in place container called a cupboard. The description of the cupboard is "The cupboard has a dark oaky texture to it; you can't tell whether it's fake or made of real wood. [if the cupboard is closed]A brushed metal handle can be used to open it.[end if]". The initial appearance of the cupboard is "Just above your head, a cupboard is affixed to the wall.".
+
+Inside the cupboard is a massive measuring cup. The massive measuring cup is a graduated fluid container. The fluid capacity of the massive measuring cup is 32.0 fl oz. The description of the massive measuring cup is "The massive measuring cup is approximately the size of your head. It is made of thick glass and has the word 'pyrex' written on it in a red font that looks like it's from the 1970s."
+
+The whisk is in the cupboard. The description of the whisk is "A bulbous metallic instrument used for blending ingredients."
+
+The spatula is in the cupboard. The description of the spatula is "A flat, black silicone pallet attached at an angle to the handle, used for flipping things. Apparently internet merchants refer to this as a 'flipper' or 'turner', but you grew up calling it a spatula.". Understand "flipper" and "turner" as the spatula.
+
+Chapter 1 - The Bisquick Box
 
 [For the purposes of our simulation, we're going to treat the pancake mix as a liquid. This also means we don't want the game telling players that liquid containers hold *only* liquids.]
 
@@ -27,11 +37,13 @@ Understand "read [something readable]" as examining.
 
 The instructions are part of the box. The description of the instructions is "'Combine Bisquick, milk, and an egg to create delicious pancake batter. Pour into a skillet under medium heat and flip when pancakes bubble and bottoms are golden brown.'". The instructions are readable. Understand "directions" as the instructions.
 
-Inside the cupboard is a massive measuring cup. The massive measuring cup is a graduated fluid container. The fluid capacity of the massive measuring cup is 32.0 fl oz. The description of the massive measuring cup is "The massive measuring cup is approximately the size of your head. It is made of thick glass and has the word 'pyrex' written on it in a red font that looks like it's from the 1970s."
+Part 2 - The Refrigerator
 
 Inside the kitchen is a closed, openable, fixed in place container called a refrigerator. The description of the refrigerator is "The refrigerator is made of shiny brushed metal." Understand "fridge" as refrigerator. The initial appearance of the refrigerator is "Next to the cupboard sits a refrigerator."
 
 Inside the refrigerator is a carton. The carton is a fluid container. The fluid capacity of the carton is 64.0 fl oz. The fluid content of the carton is 4.0 fl oz. The liquid of the carton is milk. The description of the carton is "A half-gallon cardboard carton of milk from the grocery store."
+
+Chapter 1 - The Egg
 
 Inside the refrigerator is an egg. The egg is a fluid container. The fluid capacity of the egg is 2.0 fl oz. The fluid content of the egg is 2.0 fl oz. The liquid of the egg is raw egg.
 
@@ -56,6 +68,8 @@ Understand "break [something egglike] in/into/on/onto [a fluid container]" as po
 
 The egg shell is a thing. The description of the egg shell is "It is all that remains of your formerly unbroken egg."
 
+Part 3 - The Stovetop
+
 Inside the kitchen is a stovetop. The stovetop is a fixed in place device. Understand "stove", "burner", and "oven" as the stovetop. The description of the stovetop is "It's a stovetop with a gas burner and a switch to control it. [If switched on]A ring of flames rises just below the burner grate, atop which [is-are a list of things on the burner grate][otherwise]Sitting atop its burner grate [is-are a list of things on the burner grate][end if]." The initial appearance of the stovetop is "Under the cupboard is a stovetop[if the burner grate is not empty] with [a list of things on the burner grate] on it[end if]."
 
 [Because the stovetop can't be both a device and a supporter, we need to make the supporter a part of the stovetop: we'll call it the burner grate.]
@@ -69,18 +83,35 @@ Instead of putting the skillet on the stovetop:
 
 A cast-iron skillet is on the burner grate. The skillet is an open, transparent container. The description of the skillet is "It's a pre-seasoned, cast iron 10-inch skillet. Virtually indestructible, it doubles up as an excellent source of nutritional iron. A heat-resistant silicone handle allows you to wield it under extreme heat." Understand "pan" as the skillet.
 
-[The terminology behind the word "spatula" is bizarre: http://english.stackexchange.com/questions/161554/in-the-context-of-cooking-what-is-the-difference-between-flipper-and-spatula]
+Part 4 - The Pancake-Shaped Blob
 
-A thing can be flip-inducing.
+The pancake-shaped blob is a thing. The description of the blob is "It is a [if lumpy]lumpy, [end if]pancake-shaped blob of pancake batter. It is currently [the cooking stage]." Understand "pancake" as the pancake-shaped blob.
 
-A spatula is a flip-inducing thing in the cupboard. The description of the spatula is "A flat, black silicone pallet attached at an angle to the handle, used for flipping things. Apparently internet merchants refer to this as a 'flipper' or 'turner', but you grew up calling it a spatula.". Understand "flipper" and "turner" as the spatula.
+Chapter 1 - Creation
+
+Understand "add [a fluid container] in/into/on/onto/to [something]" as pouring it into.
+Understand "put [a fluid container] in/into/on/onto [something]" as pouring it into.
+
+Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
+	if the liquid poured is pancake batter:
+		if the noun is not empty:
+			Now the fluid content of the noun is 0.0 fl oz;
+			Now the pancake-shaped blob is in the skillet;
+			if the liquid poured is well-stirred:
+				now the pancake-shaped blob is not lumpy;
+			Say "You pour the pancake batter into a [pancake-shaped blob] on the skillet.";
+			stop the action;
+	otherwise:
+		Say "You should only pour ingredients ready for cooking onto the skillet.";
+		stop the action.
+
+the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
+
+Chapter 2 - Cooking
+
+A thing can be lumpy. The pancake-shaped blob is lumpy.
 
 Cooking stage is a kind of value.  The cooking stages are goopy, slightly bubbly, rather bubbly, very bubbly, and ridiculously bubbly. 
-
-A thing can be flippable.
-A thing can be lumpy.
-
-The pancake-shaped blob is a flippable, lumpy thing. The description of the blob is "It is a [if lumpy]lumpy, [end if]pancake-shaped blob of pancake batter. It is currently [the cooking stage]." Understand "pancake" as the pancake-shaped blob.
 
 The pancake-shaped blob has a cooking stage. The cooking stage of the pancake-shaped blob is goopy.
 
@@ -95,6 +126,12 @@ Every turn:
 		otherwise:
 			now the cooking stage of the item is the cooking stage after the cooking stage of the item;
 			say "The [the printed name of the item] is now [the cooking stage of the item]."
+
+Chapter 3 - Flipping
+
+A thing can be flippable. The pancake-shaped blob is flippable.
+
+A thing can be flip-inducing. The spatula is flip-inducing.
 
 Flipping is an action applying to two things.
 Understand "flip [something flippable] with [something flip-inducing]" as flipping.
@@ -115,23 +152,7 @@ Carry out flipping:
 	remove the noun from play;
 	end the story finally.
 
-Understand "add [a fluid container] in/into/on/onto/to [something]" as pouring it into.
-Understand "put [a fluid container] in/into/on/onto [something]" as pouring it into.
-
-Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
-	if the liquid poured is pancake batter:
-		if the noun is not empty:
-			Now the fluid content of the noun is 0.0 fl oz;
-			Now the pancake-shaped blob is in the skillet;
-			if the liquid poured is well-stirred:
-				now the pancake-shaped blob is not lumpy;
-			Say "You pour the pancake batter into a [pancake-shaped blob] on the skillet.";
-			stop the action;
-	otherwise:
-		Say "You should only pour ingredients ready for cooking onto the skillet.";
-		stop the action.
-
-the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
+Part 5 - Stirring
 
 A liquid can be stirrable. raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter are stirrable.
 
@@ -144,9 +165,7 @@ After examining a fluid container (called the target):
 		otherwise:
 			say "The [liquid of the target] is not very well-blended. It's rather lumpy, really.".
 
-A thing can be stir-inducing.
-
-The whisk is a stir-inducing thing in the cupboard. The description of the whisk is "A bulbous metallic instrument used for blending ingredients."
+A thing can be stir-inducing. The whisk is stir-inducing.
 
 Stirring is an action applying to two things.
 Understand "stir [a fluid container] with [something stir-inducing]" as stirring.
@@ -169,6 +188,8 @@ Check an actor stirring something:
 Carry out stirring:
 	say "You vigorously stir the [liquid of the noun] with [the second noun].";
 	now the liquid of the noun is well-stirred.
+
+Part 6 - Liquids and Their Mixtures
 
 Table of Liquids (continued)
 liquid	potable	flavor
@@ -194,6 +215,8 @@ Understand "milk" as milky raw egg.
 Understand "mix" as pancake mix.
 Understand "mix" as pancake batter.
 Understand "batter" as pancake batter.
+
+Part 7 - The Window
 
 [When looking out the window, we'd like to show the real-world weather outside if possible. An external program/script may have written it to a file; if so, we'll use that, but otherwise we'll just fallback to a default.]
 
