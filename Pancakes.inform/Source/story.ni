@@ -164,12 +164,12 @@ Part 5 - The Pancake-Shaped Blob
 
 Chapter 1 - Creating It
 
-The pancake-shaped blob is a thing. The description of the blob is "It is a [if lumpy]lumpy, [end if]pancake-shaped blob of pancake batter. It is currently [the cooking stage]." Understand "pancake" as the pancake-shaped blob.
+A batter-blob is a kind of thing. A batter-blob can be lumpy.
+
+The pancake-shaped blob is a batter-blob. The description of the blob is "It is a [if lumpy]lumpy, [end if]pancake-shaped blob of pancake batter. It is currently [the cooking stage]." Understand "pancake" as the pancake-shaped blob.
 
 Understand "add [a fluid container] in/into/on/onto/to [something]" as pouring it into.
 Understand "put [a fluid container] in/into/on/onto [something]" as pouring it into.
-
-A thing can be lumpy.
 
 Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
 	if the liquid poured is pancake batter:
@@ -190,16 +190,16 @@ Chapter 2 - Cooking It
 
 Cooking stage is a kind of value.  The cooking stages are goopy, slightly bubbly, rather bubbly, very bubbly, and ridiculously bubbly. 
 
-The pancake-shaped blob has a cooking stage. The cooking stage of the pancake-shaped blob is goopy.
+A batter-blob has a cooking stage. The cooking stage of a batter-blob is usually goopy.
 
-Instead of eating the pancake-shaped blob, say "But it's not fully cooked yet!"
-Instead of taking the pancake-shaped blob, say "That would be very goopy."
-Before printing the name of the pancake-shaped blob: say "[if lumpy]lumpy, [end if][cooking stage] ".
+Instead of eating a batter-blob, say "But it's not fully cooked yet!"
+Instead of taking a batter-blob, say "That would be very goopy."
+Before printing the name of a batter-blob: say "[if lumpy]lumpy, [end if][cooking stage] ".
 
 Definition: a thing is heated if it is on the burner grate and the stovetop is switched on.
 
 Every turn:
-	repeat with item running through flippable things in a heated thing:
+	repeat with item running through batter-blobs in a heated thing:
 		if the cooking stage of the item is ridiculously bubbly:
 			say "Smoke emanates from the underside of the [item].";
 		otherwise:
@@ -208,13 +208,11 @@ Every turn:
 
 Chapter 3 - Flipping It
 
-A thing can be flippable. The pancake-shaped blob is flippable.
-
 A thing can be flip-inducing. The spatula is flip-inducing.
 
 Flipping is an action applying to two things.
-Understand "flip [something flippable] with [something flip-inducing]" as flipping.
-Understand "turn [something flippable] with [something flip-inducing]" as flipping.
+Understand "flip [a batter-blob] with [something flip-inducing]" as flipping.
+Understand "turn [a batter-blob] with [something flip-inducing]" as flipping.
 
 Check flipping:
 	if the cooking stage of the noun is goopy:
