@@ -25,11 +25,7 @@ The spatula is in the cupboard. The description of the spatula is "A flat, black
 
 Chapter 1 - The Bisquick Box
 
-[For the purposes of our simulation, we're going to treat the pancake mix as a liquid. This also means we don't want the game telling players that liquid containers hold *only* liquids.]
-
-The can't put solids into a fluid container rule response (A) is "[The second noun] hold[s] only liquids and other mixable ingredients."
-
-Inside the cupboard is a Bisquick box. The box is a fluid container. The fluid capacity of the box is 32.0 fl oz. The fluid content of the box is 8.0 fl oz. The liquid of the box is pancake mix. The description of the box is "It is bright yellow with blue text on it. Instructions are printed on the back.".
+Inside the cupboard is a Bisquick box. The description of the box is "It is bright yellow with blue text on it. Instructions are printed on the back.".
 
 A thing can be readable.
 
@@ -87,7 +83,7 @@ Part 4 - The Pancake-Shaped Blob
 
 The pancake-shaped blob is a thing. The description of the blob is "It is a [if lumpy]lumpy, [end if]pancake-shaped blob of pancake batter. It is currently [the cooking stage]." Understand "pancake" as the pancake-shaped blob.
 
-Chapter 1 - Creation
+Chapter 1 - Creating It
 
 Understand "add [a fluid container] in/into/on/onto/to [something]" as pouring it into.
 Understand "put [a fluid container] in/into/on/onto [something]" as pouring it into.
@@ -107,7 +103,7 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 
 the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
 
-Chapter 2 - Cooking
+Chapter 2 - Cooking It
 
 A thing can be lumpy. The pancake-shaped blob is lumpy.
 
@@ -127,7 +123,7 @@ Every turn:
 			now the cooking stage of the item is the cooking stage after the cooking stage of the item;
 			say "The [the printed name of the item] is now [the cooking stage of the item]."
 
-Chapter 3 - Flipping
+Chapter 3 - Flipping It
 
 A thing can be flippable. The pancake-shaped blob is flippable.
 
@@ -152,11 +148,25 @@ Carry out flipping:
 	remove the noun from play;
 	end the story finally.
 
-Part 5 - Stirring
+Part 5 - Mixable Ingredients
+
+Chapter 1 - Pancake Mix
+
+[To the player, the pancake mix in the Bisquick box is a solid powder, but internally it's easier to treat it as a liquid.]
+
+The Bisquick box is a fluid container. The fluid capacity of the Bisquick box is 32.0 fl oz. The fluid content of the Bisquick box is 8.0 fl oz. The liquid of the Bisquick box is pancake mix.
+
+[However, this means we don't want the game telling players that fluid containers hold *only* liquids...]
+
+The can't put solids into a fluid container rule response (A) is "[The second noun] hold[s] only liquids and other mixable ingredients."
+
+Chapter 2 - Stirring
 
 A liquid can be stirrable. raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter are stirrable.
 
 A liquid can be well-stirred.
+
+A thing can be stir-inducing. The whisk is stir-inducing.
 
 After examining a fluid container (called the target):
 	if the target is open and the liquid of the target is stirrable:
@@ -164,8 +174,6 @@ After examining a fluid container (called the target):
 			say "The [liquid of the target] is nicely blended.";
 		otherwise:
 			say "The [liquid of the target] is not very well-blended. It's rather lumpy, really.".
-
-A thing can be stir-inducing. The whisk is stir-inducing.
 
 Stirring is an action applying to two things.
 Understand "stir [a fluid container] with [something stir-inducing]" as stirring.
@@ -189,7 +197,7 @@ Carry out stirring:
 	say "You vigorously stir the [liquid of the noun] with [the second noun].";
 	now the liquid of the noun is well-stirred.
 
-Part 6 - Liquids and Their Mixtures
+Chapter 3 - Liquids and Their Mixtures
 
 Table of Liquids (continued)
 liquid	potable	flavor
@@ -212,11 +220,14 @@ mix-list	result
 
 Understand "milk" as milky pancake mix.
 Understand "milk" as milky raw egg.
-Understand "mix" as pancake mix.
 Understand "mix" as pancake batter.
+
+[Individual words in liquids don't seem to qualify as the liquids themselves, e.g. "pancake batter" can't simply be referred to as "batter" by itself, so we'll have to create those synonyms manually.]
+
+Understand "mix" as pancake mix.
 Understand "batter" as pancake batter.
 
-Part 7 - The Window
+Part 6 - The Window
 
 [When looking out the window, we'd like to show the real-world weather outside if possible. An external program/script may have written it to a file; if so, we'll use that, but otherwise we'll just fallback to a default.]
 
