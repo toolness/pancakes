@@ -168,14 +168,14 @@ Understand "put [a fluid container] in/into/on/onto [something]" as pouring it i
 Check an actor pouring something into the skillet (this is the pouring batter into skillets rule):
 	if the liquid poured is pancake batter:
 		if the noun is not empty:
-			Now the fluid content of the noun is 0.0 fl oz;
-			Now the pancake-shaped blob is in the skillet;
+			now the fluid content of the noun is 0.0 fl oz;
+			now the pancake-shaped blob is in the skillet;
 			if the liquid poured is well-stirred:
 				now the pancake-shaped blob is not lumpy;
-			Say "You pour the pancake batter into a [pancake-shaped blob] on the skillet.";
+			say "You pour the pancake batter into a [pancake-shaped blob] on the skillet.";
 			stop the action;
 	otherwise:
-		Say "You should only pour ingredients ready for cooking onto the skillet.";
+		say "You should only pour ingredients ready for cooking onto the skillet.";
 		stop the action.
 
 The pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
