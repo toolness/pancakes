@@ -23,8 +23,6 @@ The whisk is in the cupboard. The description of the whisk is "A bulbous metalli
 
 The spatula is in the cupboard. The description of the spatula is "A flat, black silicone pallet attached at an angle to the handle, used for flipping things. Apparently internet merchants refer to this as a 'flipper' or 'turner', but you grew up calling it a spatula.". Understand "flipper" and "turner" as the spatula.
 
-Chapter 1 - The Bisquick Box
-
 Inside the cupboard is a Bisquick box. The description of the box is "It is bright yellow with blue text on it. Instructions are printed on the back.".
 
 A thing can be readable.
@@ -39,9 +37,36 @@ Inside the kitchen is a closed, openable, fixed in place container called a refr
 
 Inside the refrigerator is a carton. The carton is a fluid container. The fluid capacity of the carton is 64.0 fl oz. The fluid content of the carton is 4.0 fl oz. The liquid of the carton is milk. The description of the carton is "A half-gallon cardboard carton of milk from the grocery store."
 
-Chapter 1 - The Egg
-
 Inside the refrigerator is an egg. The egg is a fluid container. The fluid capacity of the egg is 2.0 fl oz. The fluid content of the egg is 2.0 fl oz. The liquid of the egg is raw egg.
+
+Part 3 - The Stovetop
+
+Inside the kitchen is a stovetop. The stovetop is a fixed in place device. Understand "stove", "burner", and "oven" as the stovetop. The description of the stovetop is "It's a stovetop with a gas burner and a switch to control it. [If switched on]A ring of flames rises just below the burner grate, atop which [is-are a list of things on the burner grate][otherwise]Sitting atop its burner grate [is-are a list of things on the burner grate][end if]." The initial appearance of the stovetop is "Under the cupboard is a stovetop[if the burner grate is not empty] with [a list of things on the burner grate] on it[end if]."
+
+[Because the stovetop can't be both a device and a supporter, we need to make the supporter a part of the stovetop: we'll call it the burner grate.]
+
+The burner grate is part of the stovetop.
+
+Definition: a thing is heated if it is on the burner grate and the stovetop is switched on.
+
+Instead of putting the skillet on the stovetop:
+	try putting the skillet on the burner grate.
+
+A cast-iron skillet is on the burner grate. The skillet is an open, transparent container. The description of the skillet is "It's a pre-seasoned, cast iron 10-inch skillet. Virtually indestructible, it doubles up as an excellent source of nutritional iron. A heat-resistant silicone handle allows you to wield it under extreme heat." Understand "pan" as the skillet.
+
+Part 4 - Mixable Ingredients
+
+Chapter 1 - The Pancake Mix
+
+[To the player, the pancake mix in the Bisquick box is a solid powder, but internally it's easier to treat it as a liquid.]
+
+The Bisquick box is a fluid container. The fluid capacity of the Bisquick box is 32.0 fl oz. The fluid content of the Bisquick box is 8.0 fl oz. The liquid of the Bisquick box is pancake mix.
+
+[However, this means we don't want the game telling players that fluid containers hold *only* liquids...]
+
+The can't put solids into a fluid container rule response (A) is "[The second noun] hold[s] only liquids and other mixable ingredients."
+
+Chapter 2 - The Egg
 
 [By default, the Measured Liquid extension will describe our egg as an "egg of raw egg", which is rather redundant.  We can get around this if we make the egg closed and opaque. But we'll need to do a bit of trickery to surreptitiously "open" it just before the game's pouring rules are consulted, so that it can actually be poured.]
 
@@ -64,34 +89,7 @@ Understand "break [something egglike] in/into/on/onto [a fluid container]" as po
 
 The egg shell is a thing. The description of the egg shell is "It is all that remains of your formerly unbroken egg."
 
-Part 3 - The Stovetop
-
-Inside the kitchen is a stovetop. The stovetop is a fixed in place device. Understand "stove", "burner", and "oven" as the stovetop. The description of the stovetop is "It's a stovetop with a gas burner and a switch to control it. [If switched on]A ring of flames rises just below the burner grate, atop which [is-are a list of things on the burner grate][otherwise]Sitting atop its burner grate [is-are a list of things on the burner grate][end if]." The initial appearance of the stovetop is "Under the cupboard is a stovetop[if the burner grate is not empty] with [a list of things on the burner grate] on it[end if]."
-
-[Because the stovetop can't be both a device and a supporter, we need to make the supporter a part of the stovetop: we'll call it the burner grate.]
-
-The burner grate is part of the stovetop.
-
-Definition: a thing is heated if it is on the burner grate and the stovetop is switched on.
-
-Instead of putting the skillet on the stovetop:
-	try putting the skillet on the burner grate.
-
-A cast-iron skillet is on the burner grate. The skillet is an open, transparent container. The description of the skillet is "It's a pre-seasoned, cast iron 10-inch skillet. Virtually indestructible, it doubles up as an excellent source of nutritional iron. A heat-resistant silicone handle allows you to wield it under extreme heat." Understand "pan" as the skillet.
-
-Part 4 - Mixable Ingredients
-
-Chapter 1 - Pancake Mix
-
-[To the player, the pancake mix in the Bisquick box is a solid powder, but internally it's easier to treat it as a liquid.]
-
-The Bisquick box is a fluid container. The fluid capacity of the Bisquick box is 32.0 fl oz. The fluid content of the Bisquick box is 8.0 fl oz. The liquid of the Bisquick box is pancake mix.
-
-[However, this means we don't want the game telling players that fluid containers hold *only* liquids...]
-
-The can't put solids into a fluid container rule response (A) is "[The second noun] hold[s] only liquids and other mixable ingredients."
-
-Chapter 2 - Stirring
+Chapter 3 - Stirring
 
 A liquid can be stirrable. raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter are stirrable.
 
@@ -128,7 +126,7 @@ Carry out stirring:
 	say "You vigorously stir the [liquid of the noun] with [the second noun].";
 	now the liquid of the noun is well-stirred.
 
-Chapter 3 - Liquids and Their Mixtures
+Chapter 4 - Liquids and Their Mixtures
 
 Table of Liquids (continued)
 liquid	potable	flavor
@@ -160,9 +158,9 @@ Understand "batter" as pancake batter.
 
 Part 5 - The Pancake-Shaped Blob
 
-The pancake-shaped blob is a thing. The description of the blob is "It is a [if lumpy]lumpy, [end if]pancake-shaped blob of pancake batter. It is currently [the cooking stage]." Understand "pancake" as the pancake-shaped blob.
-
 Chapter 1 - Creating It
+
+The pancake-shaped blob is a thing. The description of the blob is "It is a [if lumpy]lumpy, [end if]pancake-shaped blob of pancake batter. It is currently [the cooking stage]." Understand "pancake" as the pancake-shaped blob.
 
 Understand "add [a fluid container] in/into/on/onto/to [something]" as pouring it into.
 Understand "put [a fluid container] in/into/on/onto [something]" as pouring it into.
