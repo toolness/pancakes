@@ -112,7 +112,7 @@ Understand "beat [a fluid container] with [something stir-inducing]" as stirring
 Understand "mix [a fluid container] with [something stir-inducing]" as stirring.
 
 Check an actor stirring something:
-	if the fluid content of the noun is 0.0 fl oz:
+	if the noun is empty:
 		say "But there's nothing in [the noun] to stir!";
 		stop the action;
 	if the liquid of the noun is not stirrable:
