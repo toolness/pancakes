@@ -8,7 +8,7 @@ Release along with cover art ("A stack of pancakes."), a "Pancakes" website, and
 
 Include Measured Liquid by Emily Short. Use mixed liquids.
 
-when play begins:
+When play begins:
 	say "Ah, it's a beautiful Saturday morning. The perfect time to make a delicious, relaxing breakfast!"
 
 The kitchen is a room. "You're standing in the open kitchen of your studio apartment. A dark granite counter-top separates you from the rest of your living space; beyond that is a wall-to-wall window through which the sun shines."
@@ -47,8 +47,6 @@ Inside the kitchen is a stovetop. The stovetop is a fixed in place device. Under
 
 The burner grate is part of the stovetop.
 
-Definition: a thing is heated if it is on the burner grate and the stovetop is switched on.
-
 Instead of putting the skillet on the stovetop:
 	try putting the skillet on the burner grate.
 
@@ -68,15 +66,17 @@ The can't put solids into a fluid container rule response (A) is "[The second no
 
 Chapter 2 - The Egg
 
-[By default, the Measured Liquid extension will describe our egg as an "egg of raw egg", which is rather redundant.  We can get around this if we make the egg closed and opaque. But we'll need to do a bit of trickery to surreptitiously "open" it just before the game's pouring rules are consulted, so that it can actually be poured.]
+[By default, the Measured Liquid extension will describe our egg as an "egg of raw egg", which is rather redundant.  We can get around this if we make the egg closed and opaque.]
 
 The egg is closed and opaque.
+
+[But we'll need to do a bit of trickery to surreptitiously "open" it just before the game's pouring rules are consulted, so that it can actually be poured.]
 
 Before pouring egg into something:
 	now the egg is open.
 
 Last check pouring egg into something:
-	Say "You crack the egg open by tapping it on the counter-top.";
+	say "You crack the egg open by tapping it on the counter-top.";
 	remove the noun from play;
 	now the egg shell is in the location.
 
@@ -91,7 +91,7 @@ The egg shell is a thing. The description of the egg shell is "It is all that re
 
 Chapter 3 - Stirring
 
-A liquid can be stirrable. raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter are stirrable.
+A liquid can be stirrable. Raw egg, milky pancake mix, milky raw egg, eggy pancake mix, and pancake batter are stirrable.
 
 A liquid can be well-stirred.
 
@@ -178,7 +178,7 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 		Say "You should only pour ingredients ready for cooking onto the skillet.";
 		stop the action.
 
-the pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
+The pouring batter into skillets rule is listed after the can't pour two untouched things rule in the check pouring it into rulebook.
 
 Chapter 2 - Cooking It
 
@@ -191,6 +191,8 @@ The pancake-shaped blob has a cooking stage. The cooking stage of the pancake-sh
 Instead of eating the pancake-shaped blob, say "But it's not fully cooked yet!"
 Instead of taking the pancake-shaped blob, say "That would be very goopy."
 Before printing the name of the pancake-shaped blob: say "[if lumpy]lumpy, [end if][cooking stage] ".
+
+Definition: a thing is heated if it is on the burner grate and the stovetop is switched on.
 
 Every turn:
 	repeat with item running through flippable things in a heated thing:
