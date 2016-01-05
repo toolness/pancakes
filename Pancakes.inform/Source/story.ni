@@ -2,13 +2,11 @@
 
 Release along with an interpreter.
 
-The story creation year is 2015.
+The story creation year is 2015. The release number is 2.
 
 Release along with cover art ("A stack of pancakes."), a "Pancakes" website, and source text.
 
-Include Measured Liquid by Emily Short.
-
-Use mixed liquids.
+Include Measured Liquid by Emily Short. Use mixed liquids.
 
 The kitchen is a room. "You're standing in the open kitchen of your studio apartment. A dark granite counter-top separates you from the rest of your living space; beyond that is a wall-to-wall window through which the sun shines."
 
