@@ -8,8 +8,7 @@ Release along with cover art ("A stack of pancakes."), a "Pancakes" website, and
 
 Include Measured Liquid by Emily Short. Use mixed liquids.
 
-When play begins:
-	say "Ah, it's a beautiful Saturday morning. The perfect time to make a delicious, relaxing breakfast!"
+When play begins, say "Ah, it's a beautiful Saturday morning. The perfect time to make a delicious, relaxing breakfast!"
 
 The kitchen is a room. "You're standing in the open kitchen of your studio apartment. A dark granite counter-top separates you from the rest of your living space; beyond that is a wall-to-wall window through which the sun shines."
 
@@ -25,11 +24,9 @@ The spatula is in the cupboard. The description of the spatula is "A flat, black
 
 Inside the cupboard is a Bisquick box. The description of the box is "It is bright yellow with blue text on it. Instructions are printed on the back.".
 
-A thing can be readable.
+The instructions are part of the box. The description of the instructions is "'Combine Bisquick, milk, and an egg to create delicious pancake batter. Pour into a skillet under medium heat and flip when pancakes bubble and bottoms are golden brown.'". Understand "directions" as the instructions.
 
-Understand "read [something readable]" as examining.
-
-The instructions are part of the box. The description of the instructions is "'Combine Bisquick, milk, and an egg to create delicious pancake batter. Pour into a skillet under medium heat and flip when pancakes bubble and bottoms are golden brown.'". The instructions are readable. Understand "directions" as the instructions.
+A thing can be readable. The instructions are readable. Understand "read [something readable]" as examining.
 
 Part 2 - The Refrigerator
 
@@ -41,14 +38,17 @@ Inside the refrigerator is an egg. The egg is a fluid container. The fluid capac
 
 Part 3 - The Stovetop
 
-Inside the kitchen is a stovetop. The stovetop is a fixed in place device. Understand "stove", "burner", and "oven" as the stovetop. The description of the stovetop is "It's a stovetop with a gas burner and a switch to control it. [If switched on]A ring of flames rises just below the burner grate, atop which [is-are a list of things on the burner grate][otherwise]Sitting atop its burner grate [is-are a list of things on the burner grate][end if]." The initial appearance of the stovetop is "Under the cupboard is a stovetop[if the burner grate is not empty] with [a list of things on the burner grate] on it[end if]."
+Inside the kitchen is a stovetop. The stovetop is a fixed in place device. Understand "stove", "burner", and "oven" as the stovetop.
+
+The description of the stovetop is "It's a stovetop with a gas burner and a switch to control it. [If switched on]A ring of flames rises just below the burner grate, atop which [is-are a list of things on the burner grate][otherwise]Sitting atop its burner grate [is-are a list of things on the burner grate][end if]."
+
+The initial appearance of the stovetop is "Under the cupboard is a stovetop[if the burner grate is not empty] with [a list of things on the burner grate] on it[end if]."
 
 [Because the stovetop can't be both a device and a supporter, we need to make the supporter a part of the stovetop: we'll call it the burner grate.]
 
 The burner grate is part of the stovetop.
 
-Instead of putting the skillet on the stovetop:
-	try putting the skillet on the burner grate.
+Instead of putting the skillet on the stovetop, try putting the skillet on the burner grate.
 
 A cast-iron skillet is on the burner grate. The skillet is an open, transparent container. The description of the skillet is "It's a pre-seasoned, cast iron 10-inch skillet. Virtually indestructible, it doubles up as an excellent source of nutritional iron. A heat-resistant silicone handle allows you to wield it under extreme heat." Understand "pan" as the skillet.
 
@@ -56,7 +56,7 @@ Part 4 - Mixable Ingredients
 
 Chapter 1 - The Pancake Mix
 
-[To the player, the pancake mix in the Bisquick box is a solid powder, but internally it's easier to treat it as a liquid.]
+[To the player, the pancake mix in the Bisquick box is a solid powder, but internally it's easier to treat as a liquid.]
 
 The Bisquick box is a fluid container. The fluid capacity of the Bisquick box is 32.0 fl oz. The fluid content of the Bisquick box is 8.0 fl oz. The liquid of the Bisquick box is pancake mix.
 
