@@ -88,7 +88,7 @@ The pancake-shaped blob has a cooking stage. The cooking stage of the pancake-sh
 
 Instead of eating the pancake-shaped blob, say "But it's not fully cooked yet!"
 Instead of taking the pancake-shaped blob, say "That would be very goopy."
-Before printing the name of the pancake-shaped blob: say "[cooking stage] ".
+Before printing the name of the pancake-shaped blob: say "[if lumpy]lumpy, [end if][cooking stage] ".
 
 Every turn:
 	repeat with item running through flippable things in a heated thing:
@@ -127,7 +127,7 @@ Check an actor pouring something into the skillet (this is the pouring batter in
 			Now the pancake-shaped blob is in the skillet;
 			if the liquid poured is well-mixed:
 				now the pancake-shaped blob is not lumpy;
-			Say "You pour the pancake batter into a [if the pancake-shaped blob is lumpy]lumpy, [end if]pancake-shaped blob on the skillet.";
+			Say "You pour the pancake batter into a [pancake-shaped blob] on the skillet.";
 			stop the action;
 	otherwise:
 		Say "You should only pour ingredients ready for cooking onto the skillet.";
