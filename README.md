@@ -11,6 +11,20 @@ downloading the Inform 7 IDE and loading it there.
 
 This story makes use of the [Measured Liquid][] extension by Emily Short.
 
+## Playing The Game
+
+* [On the Web](http://toolness.github.io/pancakes/)
+
+  There's no setup involved here and it's definitely the easiest way to play.
+
+* [Docker](https://hub.docker.com/r/toolness/pancakes/) (6.8mb Alpine Linux-based image)
+  
+  Run `docker run --rm -it toolness/pancakes` and you're good to go.
+
+* [Story File](http://toolness.github.io/pancakes/Pancakes.materials/Release/Pancakes.gblorb) (gblorb)
+
+  You're on your own with this one.
+
 ## Realtime Weather (experimental)
 
 The [OpenWeatherMap API][] can be used to provide realtime weather for
